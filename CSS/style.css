@@ -84,12 +84,35 @@ ul {
   box-shadow: 0 -8px 30px 0 rgba(106, 55, 212, 0.1);
 }
 
-.link-footer{
-    display: flex;
-    gap:8rem;
+.link-footer {
+  display: flex;
+  gap: 8rem;
 }
 
-.rrss-footer-container ul{
-    display: flex;
-    gap: 2rem;
+.rrss-footer-container ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.contact-button {
+  outline: none;
+  display: flex;
+  padding: 24px 48px;
+  align-items: center;
+  gap: 16px;
+
+  border-radius: 9999px;
+  background: #6a37d4;
+  box-shadow: 6px 6px 0 0 #2f2f2e;
+
+  color: var(--white-cream);
+  text-align: center;
+  font-family: var(--font);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.contact-button:hover{
+    cursor: pointer;
 }
