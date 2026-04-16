@@ -45,6 +45,7 @@ h1 {
 }
 .menu_hamburguesa:checked ~ .ul_links {
   height: calc(100vh - 70px);
+  z-index: 2;
 }
 .list_icon {
   color: var(--purple);
@@ -75,17 +76,35 @@ h1 {
 
 .container1{
     display: flex;
+    position: relative;
     height: auto;
-    max-width: auto;
+    max-width: 800;
     border-radius: 48px;
     box-shadow: 8px 8px 0 0 #6A37D4;
     margin:40px;
     display: flex;
     margin: 20px;
-    padding: 80px;
-    background-image: url("../assets/images/duck_conteiner1.png");
-    background-size: 100%;
-    background-position: center;
+    padding: 40px;
+    overflow: hidden;
+    background-color: var(--white);
+    z-index: 1;
+
+.catalog_header {
+  position: relative;
+  z-index: 2;
+  flex:1;
+}
+
+}
+.duck-card{
+  position: absolute;
+  bottom: -10px;       
+  right: -10px;        
+  width: 180px;      
+  height: auto;
+  z-index: 1;
+  opacity: 0.8;
+  pointer-events: none;
 
 }
 .edicion_lim{
@@ -116,6 +135,8 @@ h1 {
     font-weight: 500;
     line-height: 20px; /* 142.857% */
     align-self: stretch;
+    max-width: 100%;
+    height: auto;
 }
 .new_icon{
     width: auto;
@@ -133,7 +154,8 @@ h1 {
     background: #6A37D4;
     box-shadow: 4px 4px 0 0 #2F2F2E;
     margin-bottom: 10px;
-    margin-left: 30px;
+    left: 30px;
+    align-items: flex-start;
 }
 
 .rocket_icon {
@@ -239,4 +261,23 @@ letter-spacing: 0.0875rem;
     background: var(--white-cream);
     color: var(--purple);
     transition: background 0.8s ease;
+}
+
+/* QUERYS PARA RESPONSIVE DESIGN */
+
+@media (min-width: 768px) {
+  .container1 {
+    max-width: 800px; /* Más ancho en PC */
+    padding: 60px;
+  }
+
+  .duck-card {
+    width: 250px;    /* El pato crece en la versión web */
+    bottom: -20px;   /* Incluso puedes hacer que sobresalga un poco del borde */
+    right: 20px;
+  }
+  
+  .catalog-header {
+    padding-right: 200px; /* Más espacio para el pato grande */
+  }
 }
