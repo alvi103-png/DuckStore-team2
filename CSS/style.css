@@ -1,73 +1,85 @@
 @import url(/DuckStore-team2/CSS/reset.css);
 
-:root{
-    --purple: #6A37D4;
-    --yellow: #FACC15;
-    --yellow-dark-text: #5D5200;
-    --black: #18181B;
-    --white: #FFFFFF;
-    --grey: #EAE7E7;
-    --red: #BE2D06;
-    --grey-text-paragraph:#5C5B5B;
-    --white-cream: #F9F6F5;
-    --font: "Plus Jakarta Sans", sans-serif;
+:root {
+  --purple: #6a37d4;
+  --yellow: #facc15;
+  --yellow-dark-text: #5d5200;
+  --black: #18181b;
+  --white: #ffffff;
+  --grey: #eae7e7;
+  --red: #be2d06;
+  --grey-text-paragraph: #5c5b5b;
+  --white-cream: #f9f6f5;
+  --font: "Plus Jakarta Sans", sans-serif;
 }
 
 body {
-    font-family: var(--font);
-    background: var(--white-cream);
+  font-family: var(--font);
+  background: var(--white-cream);
 }
 h1 {
-    font-size: 2rem;
-    color: var(--purple);
-    margin-bottom: 1rem;
-    font-style: italic;
+  font-size: 2rem;
+  color: var(--purple);
+  margin-bottom: 1rem;
+  font-style: italic;
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
-ol,ul{
-    list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-.navbar{
-    background-color: rgba(250, 204, 21, 0.7);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    flex-wrap: wrap;
-    position: relative;
-    padding: 16px 120px;
-    border-bottom: 2px solid var(--purple);
+.navbar {
+  background-color: rgba(250, 204, 21, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 16px 120px;
+  border-bottom: 2px solid var(--purple);
 }
-.menu_hamburguesa{
-    display: none;
+.menu_hamburguesa {
+  display: none;
 }
-.menu_hamburguesa:checked ~ .ul_links{
-    height: calc(100vh - 70px);
+.menu_hamburguesa:checked ~ .ul_links {
+  height: calc(100vh - 70px);
 }
-.list_icon{
-    color:var(--purple);
-    cursor: pointer;
+.list_icon {
+  color: var(--purple);
+  cursor: pointer;
 }
-.ul_links{
-    width: 100%;
-    background-color: var(--purple);
-    position: absolute;
-    top: 80px;
-    left: 0;
-    height:0;
-    /*height: calc(100vh - 70px); */
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 3rem;
-   
+.ul_links {
+  width: 100%;
+  background-color: var(--purple);
+  position: absolute;
+  top: 80px;
+  left: 0;
+  height: 0;
+  /*height: calc(100vh - 70px); */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
 }
 .link {
-    font-size: 3.5rem;
-    color: rgba(250, 204, 21, 0.7);
-    font-weight: bold;
+  font-size: 3.5rem;
+  color: rgba(250, 204, 21, 0.7);
+  font-weight: bold;
+}
+
+.footer {
+  display: flex;
+  padding: 64px 48px;
+  align-items: center;
+  gap: 15rem;
+  justify-content: center;
+
+  border-radius: 48px 48px 0 0;
+  background: rgba(250, 204, 21, 0.7);
+  box-shadow: 0 -8px 30px 0 rgba(106, 55, 212, 0.1);
 }
