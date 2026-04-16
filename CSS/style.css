@@ -105,7 +105,7 @@ ol,ul{
 }
 .button_catalog {
     display: flex;
-    padding: 24px 24px 20px 24px;
+    padding: 20px 20px 20px 20px;
     align-items: flex-start;
     font-size: 20px;
     color: white;
@@ -113,7 +113,7 @@ ol,ul{
     border-radius: 9999px;
     background: #6A37D4;
     box-shadow: 4px 4px 0 0 #2F2F2E;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin-left: 30px;
 }
 
