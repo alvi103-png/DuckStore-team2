@@ -113,6 +113,35 @@ ul {
   font-weight: 800;
 }
 
-.contact-button:hover{
-    cursor: pointer;
+.contact-button:hover {
+  cursor: pointer;
+}
+
+.naming-footer {
+  color: var(--black);
+  font-family: var(--font);
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.75rem;
+}
+
+.copyright-footer {
+  color: var(--black);
+  font-family: var(--font);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25rem;
+  letter-spacing: 0.0875rem;
+}
+
+.link-footer li{
+    color: var(--yellow-dark-text);
+font-family: var(--font);
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 700;
+line-height: 1.25rem;
+letter-spacing: 0.0875rem;
 }
