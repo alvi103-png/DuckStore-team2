@@ -1,26 +1,44 @@
-.imagen-reducida {
+.card__image {
   width: 60%;       /* Ancho relativo a su contenedor */
   max-width: 500px;  /* Tamaño máximo deseado */
   height: auto;      /* Mantiene la proporción automáticamente */
   /* justify-content:center; */
+  border: 2px solid #6A37D4;
+  border-radius: 15px; 
+  margin: 5%;
 }
 
-.contenedor {
+.card {
   display: flex;       /* Activa el diseño flexible */
   align-items: center; /* Centra el texto verticalmente respecto a la imagen */
   gap: 20px;           /* Espacio de separación entre imagen y texto */
 }
-.texto {
+.card__content{
   flex: 1;             /* Hace que el texto ocupe el resto del espacio */
 }
 
-h1 {
+
+.card__name {
     font-weight: bold;
     color:black;
 }
 
+.card__description
+{
+  border: 2px solid gray;
+  border-radius: 15px; 
+  padding: 5%;
+  margin-left:5%;
+}
+.card__price {
+     font-size: 1rem;
+    color: #6A37D4;
+    font-style: italic;
+    font-weight: bold;
+} 
+
 @media (max-width: 600px) { 
-  .contenedor 
+  .card 
   { flex-direction: column;
    } 
   }
