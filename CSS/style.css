@@ -88,3 +88,8 @@ ul {
     display: flex;
     gap:8rem;
 }
+
+.rrss-footer-container ul{
+    display: flex;
+    gap: 2rem;
+}
