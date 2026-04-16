@@ -17,7 +17,8 @@ a {
   color: inherit;
 }
 
-/*img {
+img {
   max-width: 100%;
-  display: block;
-}*/
+  /*display: block;*/
+}
+
