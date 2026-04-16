@@ -41,7 +41,7 @@ ol,ul{
     width: 100%;
     background-color: #6A37D4;
     position: absolute;
-    top: 70px;
+    top: 80px;
     left: 0;
     height:0;
     /*height: calc(100vh - 70px); */
