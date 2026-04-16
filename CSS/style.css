@@ -1,8 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
-}
+@import url(/DuckStore-team2/CSS/reset.css);
 
 body {
     font-family: "Plus Jakarta Sans", sans-serif;
@@ -20,7 +16,7 @@ a{
 ol,ul{
     list-style: none;
 }
-.navbar {
+.navbar{
     background-color: rgba(250, 204, 21, 0.7);
     display: flex;
     justify-content: space-between;
@@ -28,7 +24,8 @@ ol,ul{
     height: 100%;
     flex-wrap: wrap;
     position: relative;
-    padding: 0.5rem
+    padding: 16px 120px;
+    border-bottom: 2px solid #6A37D4;
 }
 .menu_hamburguesa{
     display: none;
