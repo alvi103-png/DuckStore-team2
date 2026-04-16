@@ -1,5 +1,18 @@
 @import url(/DuckStore-team2/CSS/reset.css);
 
+:root{
+    --purple: #6A37D4;
+    --yellow: #FACC15;
+    --yellow-dark-text: #5D5200;
+    --black: #18181B;
+    --white: #FFFFFF;
+    --grey: #EAE7E7;
+    --red: #BE2D06;
+    --grey-text-paragraph:#5C5B5B;
+    --white-cream: #F9F6F5;
+    --font: "Plus Jakarta Sans", sans-serif;
+}
+
 body {
     font-family: "Plus Jakarta Sans", sans-serif;
     background: #F9F6F5;
