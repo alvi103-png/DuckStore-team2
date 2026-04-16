@@ -1,0 +1,27 @@
+.imagen-reducida {
+  width: 60%;       /* Ancho relativo a su contenedor */
+  max-width: 500px;  /* Tamaño máximo deseado */
+  height: auto;      /* Mantiene la proporción automáticamente */
+  /* justify-content:center; */
+}
+
+.contenedor {
+  display: flex;       /* Activa el diseño flexible */
+  align-items: center; /* Centra el texto verticalmente respecto a la imagen */
+  gap: 20px;           /* Espacio de separación entre imagen y texto */
+}
+.texto {
+  flex: 1;             /* Hace que el texto ocupe el resto del espacio */
+}
+
+h1 {
+    font-weight: bold;
+    color:black;
+}
+
+@media (max-width: 600px) { 
+  .contenedor 
+  { flex-direction: column;
+   } 
+  }
+
