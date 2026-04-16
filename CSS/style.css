@@ -14,12 +14,12 @@
 }
 
 body {
-    font-family: "Plus Jakarta Sans", sans-serif;
-    background: #F9F6F5;
+    font-family: var(--font);
+    background: var(--white-cream);
 }
 h1 {
     font-size: 2rem;
-    color: #6A37D4;
+    color: var(--purple);
     margin-bottom: 1rem;
     font-style: italic;
 }
@@ -38,7 +38,7 @@ ol,ul{
     flex-wrap: wrap;
     position: relative;
     padding: 16px 120px;
-    border-bottom: 2px solid #6A37D4;
+    border-bottom: 2px solid var(--purple);
 }
 .menu_hamburguesa{
     display: none;
@@ -47,12 +47,12 @@ ol,ul{
     height: calc(100vh - 70px);
 }
 .list_icon{
-    color:#6A37D4;
+    color:var(--purple);
     cursor: pointer;
 }
 .ul_links{
     width: 100%;
-    background-color: #6A37D4;
+    background-color: var(--purple);
     position: absolute;
     top: 80px;
     left: 0;
