@@ -1,0 +1,10 @@
+
+/* Estilos para móviles (pantallas de 600px o menos) */
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    header {
+        background-color: yellow;;
+    }
+}
