@@ -90,6 +90,37 @@
 
 /*DESKTOP VERSION MEDIA QUERIES*/
 
-@media (min-width:768px){
-    
+@media (min-width: 768px) {
+  .h1_catalog {
+    font-size: 4rem;
+    line-height: normal;
+
+    display: flex;
+    width: 75rem;
+    height: 5.9375rem;
+    border-bottom: 0.15rem solid var(--purple);
+  }
+
+  .main-catalog {
+    margin: 3rem auto;
+    flex: 1;
+  }
+
+  .catalog_grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem 1.25rem;
+    margin-top: 6.38rem;
+    margin-bottom: 4.62rem;
+  }
+
+  .card {
+    width: 17.5625rem;
+    gap: 1rem;
+  }
+
+  .card_img {
+    width: 17.5625rem;
+    margin-bottom: 1rem;
+  }
 }
