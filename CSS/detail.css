@@ -17,7 +17,7 @@
 
 .card__content{
   flex: 1;             /* Hace que el texto ocupe el resto del espacio */
-  /* margin-left:5%; */
+  margin-left:5%;
 }
 
 .card__name {
@@ -34,15 +34,32 @@
   margin-top: 5%;
   margin-right: 5%;
   margin-bottom: 5%;
+  width:80%;
 }
 .card__price {
-     font-size: 1rem;
+    font-size: 1rem;
     color: #6A37D4;
     font-style: italic;
     font-weight: bold;
 } 
 
-@media (max-width: 600px) { 
+.card__quantity{ 
+  /* align-items: center; */
+  text-align: center;
+  border: 2px solid gray;
+  border-radius: 15px; 
+  width:15%;
+  padding-left: 5;
+  margin-bottom: 5%;
+  min-width: 200px;
+  font-size: 0.7rem;
+  color:red;
+  background-color:lightgrey;
+  font-style: italic;
+  font-weight: bold;
+}
+
+@media (man-width: 600px) { 
   .card 
   { flex-direction: column;
    } 
