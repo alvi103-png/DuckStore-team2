@@ -22,12 +22,12 @@ body {
 }
 
 /*ESTILO HEADER Y MENU HAMBURGUESA*/
-h1 {
+/* h1 {
   font-size: 2rem;
   color: var(--purple);
   margin-bottom: 1rem;
   font-style: italic;
-}
+} */
 
 .navbar {
   background-color: rgba(250, 204, 21, 0.7);
