@@ -1,3 +1,5 @@
+/*MOBILE VERSION*/
+
 .main-catalog {
   margin: 1.31rem 1.25rem;
   flex: 1;
@@ -84,4 +86,10 @@
   font-weight: 800;
   line-height: 1rem;
   font-family: var(--font);
+}
+
+/*DESKTOP VERSION MEDIA QUERIES*/
+
+@media (min-width:768px){
+    
 }
