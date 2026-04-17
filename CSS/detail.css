@@ -11,11 +11,13 @@
 .card {
   display: flex;       /* Activa el diseño flexible */
   align-items: center; /* Centra el texto verticalmente respecto a la imagen */
-  gap: 20px;           /* Espacio de separación entre imagen y texto */
+  gap: 10px;           /* Espacio de separación entre imagen y texto */
+  flex-wrap: wrap;
 }
 
 .card__content{
   flex: 1;             /* Hace que el texto ocupe el resto del espacio */
+  /* margin-left:5%; */
 }
 
 .card__name {
@@ -28,7 +30,10 @@
   border: 2px solid gray;
   border-radius: 15px; 
   padding: 5%;
-  margin-left:5%;
+  margin-left:0%;
+  margin-top: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
 }
 .card__price {
      font-size: 1rem;
@@ -41,5 +46,10 @@
   .card 
   { flex-direction: column;
    } 
+   .card__content
+   {
+    min-width: 350px;
+     margin-left:5%;
+   }
   }
 
