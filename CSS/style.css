@@ -80,12 +80,11 @@ h1 {
     display: flex;
     position: relative;
     height: auto;
-    max-width: 800;
+    width: 92%;
+    max-width: 800px;
     border-radius: 48px;
     box-shadow: 8px 8px 0 0 #6A37D4;
-    margin:40px;
-    display: flex;
-    margin: 20px;
+    margin: 2.5rem auto;
     padding: 40px;
     overflow: hidden;
     background-color: var(--white);
@@ -147,7 +146,7 @@ h1 {
 }
 .button_catalog {
     display: inline-flex;
-    padding: 20px 20px 20px 20px;
+    padding: 10px 10px;
     align-items: left   ;
     font-size: 20px;
     color: white;
@@ -157,7 +156,7 @@ h1 {
     box-shadow: 4px 4px 0 0 #2F2F2E;
     margin-bottom: 10px;
     left: 30px;
-    align-items: flex-start;
+    
 }
 
 .rocket_icon {
@@ -169,6 +168,48 @@ h1 {
 .duck_main{
     max-width: 60%;
     height: auto;
+}
+
+/*ESTILOS LANDING PAGE - MISION*/
+
+.container-mision{
+    display: flex;
+    position: relative;
+    height: auto;
+    width: 92%;
+    max-width: 800px;
+    border-radius: 48px;
+    margin:2.5rem auto;
+    flex-direction: column;
+    padding: 40px;
+    overflow: hidden;
+    background-color: var(--purple);
+    z-index: 1;
+    gap: 10px;
+}
+.title-mision{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.star_icon{
+  height: 44px;
+  width: 44;
+  margin: 5px;
+}
+
+.mision {
+  color: var(--yellow)
+}
+
+.Quack{
+  color: var(--white)
+}
+
+.text-mision {
+  color: var(--white-cream);
+  text-align: center;
 }
 
 /*AQUÍ COMIENZAN LOS ESTILOS DEL FOOTER*/
