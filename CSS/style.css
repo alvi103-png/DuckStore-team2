@@ -37,7 +37,7 @@ h1 {
   height: 100%;
   flex-wrap: wrap;
   position: relative;
-  padding: 16px 120px;
+  padding: 20px 40px;
   border-bottom: 2px solid var(--purple);
 }
 .menu_hamburguesa {
@@ -71,23 +71,27 @@ h1 {
   font-weight: bold;
 }
 
-
 /*AQUÍ COMIENZAN LOS ESTILOS DEL FOOTER*/
 .footer {
   display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
   padding: 64px 48px;
+  width: auto;
+  justify-content: space-between;
   align-items: center;
-  gap: 15rem;
-  justify-content: center;
+  flex-shrink: 0;
 
   border-radius: 48px 48px 0 0;
   background: rgba(250, 204, 21, 0.7);
   box-shadow: 0 -8px 30px 0 rgba(106, 55, 212, 0.1);
 }
 
-.link-footer {
+
+.copy-container {
   display: flex;
-  gap: 8rem;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .rrss-footer-container ul {
@@ -95,12 +99,19 @@ h1 {
   gap: 2rem;
 }
 
+.social-icon {
+  min-width: 56px;
+  min-height: 56px;
+}
+
 .contact-button {
   outline: none;
   display: flex;
-  padding: 24px 48px;
+  height: 3.5rem;
+  padding: 2rem 3rem;
   align-items: center;
-  gap: 16px;
+  gap: 0.625rem;
+  flex-shrink: 0;
 
   border-radius: 9999px;
   background: #6a37d4;
@@ -121,14 +132,24 @@ h1 {
 .naming-footer {
   color: var(--black);
   font-family: var(--font);
-  font-size: 1.25rem;
+  font-size: 2.25rem;
   font-style: normal;
   font-weight: 800;
-  line-height: 1.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .copyright-footer {
   color: var(--black);
+  font-family: var(--font);
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25rem;
+  letter-spacing: 0.0875rem;
+}
+
+.link-footer li {
+  color: var(--yellow-dark-text);
   font-family: var(--font);
   font-size: 0.875rem;
   font-style: normal;
@@ -137,31 +158,35 @@ h1 {
   letter-spacing: 0.0875rem;
 }
 
-.link-footer li{
-    color: var(--yellow-dark-text);
-font-family: var(--font);
-font-size: 0.875rem;
-font-style: normal;
-font-weight: 700;
-line-height: 1.25rem;
-letter-spacing: 0.0875rem;
-}
-
 /*ANIMACIONES FOOTER*/
-.link-footer li:hover{
-    text-decoration: underline var(--purple);
-    text-underline-offset: 0.4rem;
-    text-decoration-thickness: 0.5rem;
+.link-footer li:hover {
+  text-decoration: underline var(--purple);
+  text-underline-offset: 0.4rem;
+  text-decoration-thickness: 0.5rem;
 }
 
-.rrss-footer-container li:hover{
-    box-shadow: 5px -12px 30px 5px rgba(106, 55, 212, 0.8);
-    border-radius: 2rem;
-    transition: box-shadow 0.3s ease;
+.rrss-footer-container li:hover {
+  box-shadow: 5px -12px 30px 5px rgba(106, 55, 212, 0.8);
+  border-radius: 2rem;
+  transition: box-shadow 0.3s ease;
 }
 
-.contact-button:hover{
-    background: var(--white-cream);
-    color: var(--purple);
-    transition: background 0.8s ease;
+.contact-button:hover {
+  background: var(--white-cream);
+  color: var(--purple);
+  transition: background 0.8s ease;
+}
+
+
+/*MEDIA QUERIES*/
+@media (max-width: 768px) {
+  .footer {
+    justify-content: center;
+    text-align: center;
+    padding: 40px 24px;
+  }
+
+  .naming-footer {
+    margin-bottom: 3rem;
+  }
 }
