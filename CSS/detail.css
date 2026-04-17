@@ -13,10 +13,10 @@
   align-items: center; /* Centra el texto verticalmente respecto a la imagen */
   gap: 20px;           /* Espacio de separación entre imagen y texto */
 }
+
 .card__content{
   flex: 1;             /* Hace que el texto ocupe el resto del espacio */
 }
-
 
 .card__name {
     font-weight: bold;
