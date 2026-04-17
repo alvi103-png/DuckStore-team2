@@ -212,6 +212,28 @@ h1 {
   text-align: center;
 }
 
+/* ESTILOS LANDING PAGE - MISION - CARDS*/
+
+.minicard1{
+  display: flex;
+  position: relative;
+  height: auto;
+  width: 92%;
+  max-width: 800px;
+  border-radius: 48px;
+  margin:2.5rem auto;
+  flex-direction: column;
+  padding: 40px;
+  overflow: hidden;
+  background-color: var(--white);
+  z-index: 1;
+  gap: 10px;
+  border-style: solid;
+  border: 20px;
+  border-color: var(--purple);
+    
+}
+
 /*AQUÍ COMIENZAN LOS ESTILOS DEL FOOTER*/
 .footer {
   display: flex;
