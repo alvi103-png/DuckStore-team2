@@ -214,28 +214,17 @@ h1 {
 
 /* ESTILOS LANDING PAGE - MISION - CARDS*/
 
-.section2-mision {
-    display: grid;
-    /* Creamos 2 columnas iguales */
-    grid-template-columns: 1fr 1fr; 
-    gap: 20px; /* Espacio entre cards */
-    padding: 20px;
-}
-
-.card-ds:nth-child(1) {
-  grid-column: span 2;
-}
-
 .minicard1{
   display: flex;
   position: relative;
   height: auto;
   width: 92%;
   max-width: 800px;
+  text-align: center;
   
   margin:2.5rem auto;
   flex-direction: column;
-  padding: 40px;
+  padding: 30px;
   overflow: hidden;
   background-color: var(--white);
   z-index: 1;
@@ -254,6 +243,7 @@ h1 {
   height: auto;
   width: 92%;
   max-width: 800px;
+  text-align: center;
   
   margin:2.5rem auto;
   flex-direction: column;
@@ -276,6 +266,7 @@ h1 {
   height: auto;
   width: 92%;
   max-width: 800px;
+  text-align: center;
   
   margin:2.5rem auto;
   flex-direction: column;
