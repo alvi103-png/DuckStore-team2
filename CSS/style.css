@@ -77,18 +77,18 @@ h1 {
 /*ESTILOS CONTENIDO LANDING PAGE*/
 
 .container1{
-    display: flex;
-    position: relative;
-    height: auto;
-    width: 92%;
-    max-width: 800px;
-    border-radius: 48px;
-    box-shadow: 8px 8px 0 0 #6A37D4;
-    margin: 2.5rem auto;
-    padding: 40px;
-    overflow: hidden;
-    background-color: var(--white);
-    z-index: 1;
+  display: flex;
+  position: relative;
+  height: auto;
+  width: 92%;
+  max-width: 800px;
+  border-radius: 48px;
+  box-shadow: 8px 8px 0 0 var(--purple);
+  margin: 2.5rem auto;
+  padding: 40px;
+  overflow: hidden;
+  background-color: var(--white);
+  z-index: 1;
 
 .catalog_header {
   position: relative;
@@ -109,60 +109,65 @@ h1 {
 
 }
 .edicion_lim{
-    background-color: #6A37D4;
-    font-size: 10px;
-    color: #F9F6F5;
-    font-weight: bold;
-    display: inline-block;
-    padding: 4px 20px;
-    border-radius: 40px;
-    margin: 5px;
-    letter-spacing: 2.4px;
+  background-color: var(--purple);
+  font-size: 10px;
+  color: var(--white-cream);
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 40px;
+  letter-spacing: 2.4px;
+  width: 160px;
+  height: 26px;
+  text-align: center;
+  justify-content: center;
 }
 
 .quack{
-    color: #5D5200;
-    font-size: 48px;
-    font-style: italic;
-    font-weight: 800;
-    line-height: 43.2px; /* 90% */
-    letter-spacing: -2.4px; 
+  color: #5D5200;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 43.2px; /* 90% */
+  letter-spacing: -2.4px; 
+  margin:20px 0px 20px 0px;
 }
+
 .text1{
-    font-size: 14px;
-    color: #5C5B5B;
-    margin-bottom: 1rem;
-    text-align: left;
-    font-weight: 500;
-    line-height: 20px; /* 142.857% */
-    align-self: stretch;
-    max-width: 100%;
-    height: auto;
+  font-size: 14px;
+  color: #5C5B5B;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+  align-self: stretch;
+  max-width: 100%;
+  height: auto;
+  margin: 25px 0px 25px 0px;
 }
 .new_icon{
-    width: auto;
-    height: auto;
-    margin-bottom: 1rem;
+  width: auto;
+  height: auto;
+  margin-bottom: 1rem;
 }
 .button_catalog {
-    display: inline-flex;
-    padding: 10px 10px;
-    align-items: left   ;
-    font-size: 20px;
-    color: white;
-    gap: 8px;
-    border-radius: 9999px;
-    background: #6A37D4;
-    box-shadow: 4px 4px 0 0 #2F2F2E;
-    margin-bottom: 10px;
-    left: 30px;
-    
+  display: inline-flex;
+  padding: 10px 10px;
+  align-items: left   ;
+  font-size: 20px;
+  color: white;
+  gap: 8px;
+  border-radius: 9999px;
+  background: #6A37D4;
+  box-shadow: 4px 4px 0 0 #2F2F2E;
+  margin-bottom: 10px;
+  left: 30px;
+  cursor: pointer;
 }
 
 .rocket_icon {
-    width: 20px;
-    height: 20px;
-    margin-left: 5px;
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
     
 }
 .duck_main{
@@ -173,19 +178,19 @@ h1 {
 /*ESTILOS LANDING PAGE - MISION*/
 
 .container-mision{
-    display: flex;
-    position: relative;
-    height: auto;
-    width: 92%;
-    max-width: 800px;
-    border-radius: 48px;
-    margin:2.5rem auto;
-    flex-direction: column;
-    padding: 40px;
-    overflow: hidden;
-    background-color: var(--purple);
-    z-index: 1;
-    gap: 10px;
+  display: flex;
+  position: relative;
+  height: auto;
+  width: 92%;
+  max-width: 800px;
+  border-radius: 48px;
+  margin:2.5rem auto;
+  flex-direction: column;
+  padding: 40px;
+  overflow: hidden;
+  background-color: var(--purple);
+  z-index: 1;
+  gap: 10px;
 }
 .title-mision{
   display: flex;
@@ -294,6 +299,63 @@ h1 {
 
 .class-description {
   text-align: center;
+}
+
+/* ESTILOS LANDING PAGE - CONTACTO*/
+
+.section-contact{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: auto;
+  width: 92%;
+  max-width: 800px;
+  border-radius: 48px;
+  box-shadow: 8px 8px 0 0 #6A37D4;
+  margin: 2.5rem auto;
+  padding: 40px;
+  overflow: hidden;
+  background-color: rgba(250, 204, 21, 0.7);
+  z-index: 1;
+}
+
+.contact-title {
+  font-size: 24px;
+  font-style: bold;
+  font-weight: bolder;
+  color: var(--yellow-dark-text);
+  text-align: center;
+}
+
+.text-contact{
+  font-size: 14px;
+  font-style: bold;
+  color: var(--yellow-dark-text);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.button_contact {
+  padding: 10px 10px;
+  display: inline-flex;
+  font-size: 20px;
+  color: white;
+  gap: 8px;
+  border-radius: 9999px;
+  background: var(--purple);
+  box-shadow: 4px 4px 0 0 var(--yellow-dark-text);
+  justify-content: center;
+  width: 209px;
+  height: auto;
+  align-self: center;
+  cursor: pointer;
+}
+
+.arrow_icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+    
 }
 
 /*AQUÍ COMIENZAN LOS ESTILOS DEL FOOTER*/
