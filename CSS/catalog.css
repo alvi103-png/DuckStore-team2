@@ -103,6 +103,7 @@
   .main-catalog {
     margin: 3rem auto;
     max-width: 1196px;
+    width: 92%;
     flex: 1;
   }
 
