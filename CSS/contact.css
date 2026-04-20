@@ -2,6 +2,5 @@
 .contact_main{
     display: flex;
     flex-direction: column;
-    margin-top: 4.06rem;
-    margin-bottom: 12.88rem;
+    margin: 4.06rem 1.25rem;
 }
