@@ -136,13 +136,13 @@
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 800;
-  z-index:0;
+  z-index: 0;
 }
 
 .map_img_container {
   position: relative; /* ESTO ES LA CLAVE: Crea el marco de referencia */
   align-items: center;
-  width: 100%;  
+  width: 100%;
 }
 
 .map_icon {
@@ -151,4 +151,50 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
+}
+
+.info_contact_container {
+  display: flex;
+  padding: 3rem 1.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.38rem;
+
+  border-radius: 3rem;
+  border: 4px solid #000;
+  background: #dfdcdc;
+}
+
+.h3_contact_info {
+  color: #5c5b5b;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.075rem;
+  margin-bottom: -2rem;
+}
+
+.contact_p_info {
+  color: #2f2f2e;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+
+.text_container {
+  display: flex;
+  padding: 1.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+
+  border-radius: 3rem;
+  border: 2px dashed #006859;
+  background: rgba(0, 254, 220, 0.3);
+}
+
+.text_container p {
+  color: #2f2f2e;
+  font-size: 0.875rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.25rem;
 }
