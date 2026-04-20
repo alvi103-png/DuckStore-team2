@@ -1,2 +1,7 @@
 /*AQUÍ EMPIEZAN ESTILOS DE LA PÁGINA DE CONTACTO*/
-
+.contact_main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4.06rem;
+    margin-bottom: 12.88rem;
+}
