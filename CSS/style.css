@@ -116,7 +116,7 @@ h1 {
   border-radius: 40px;
   letter-spacing: 2.4px;
   width: 160px;
-  height: 26px;
+  height: 35px;
   text-align: center;
   justify-content: center;
 }
@@ -152,6 +152,7 @@ h1 {
   display: inline-flex;
   padding: 10px 10px;
   align-items: left;
+  font: "Plus Jakarta Sans", sans-serif;
   font-size: 20px;
   color: white;
   gap: 8px;
@@ -221,17 +222,27 @@ h1 {
 
 /* ESTILOS LANDING PAGE - MISION - CARDS*/
 
+.section2-mision{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
 .minicard1{
   display: flex;
   position: relative;
   height: auto;
-  width: 92%;
+  width: 60%;
   max-width: 800px;
-  text-align: center;
+  flex-wrap: wrap;
+  align-content: center;
   
-  margin:2.5rem auto;
+  margin: 1rem;
   flex-direction: column;
-  padding: 30px;
+  padding: 20px;
   overflow: hidden;
   background-color: var(--white);
   z-index: 1;
@@ -244,17 +255,24 @@ h1 {
   border-radius: 48px;  
 }
 
+.card-diversion{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+
 .minicard2{
   display: flex;
   position: relative;
   height: auto;
-  width: 92%;
+  width: 60%;
   max-width: 800px;
   text-align: center;
   
-  margin:2.5rem auto;
+  margin:1rem;
   flex-direction: column;
-  padding: 40px;
+  padding: 20px;
   overflow: hidden;
   background-color: var(--white);
   z-index: 1;
@@ -271,13 +289,13 @@ h1 {
   display: flex;
   position: relative;
   height: auto;
-  width: 92%;
+  width: 60%;
   max-width: 800px;
   text-align: center;
   
-  margin:2.5rem auto;
+  margin:1rem;
   flex-direction: column;
-  padding: 40px;
+  padding: 20px;
   overflow: hidden;
   background-color: var(--white);
   z-index: 1;
@@ -291,16 +309,20 @@ h1 {
 }
 
 .mision2-icon{
-  height: 36px;
-  width: 35px;
+  height: 60px;
+  width: 60px;
+  margin: 10px auto;
+
 }
 
 .card-title {
   text-align: center;
 }
 
-.class-description {
+.card-description {
   text-align: center;
+
+  
 }
 
 /* ESTILOS LANDING PAGE - CONTACTO*/
@@ -507,5 +529,19 @@ h1 {
   .catalog-header {
     padding-right: 200px; /* Más espacio para el pato grande */
   }
+
+  .section2-mision {
+    flex-direction: row;       /* 👈 las pone en horizontal */
+    justify-content: center;   /* 👈 centra el conjunto */
+    align-items: stretch;      /* 👈 misma altura */
+  }
+
+  .minicard1, .minicard2, .minicard3{
+    width: 30%; 
+    height: auto;
+  
+    
+  }
+  
 }
 
