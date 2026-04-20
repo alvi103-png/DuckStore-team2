@@ -51,11 +51,50 @@
   box-shadow: 8px 8px 0 0 #5517bf;
 }
 
-.contact_img_container img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 2.3rem;
+.contact_img_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2.3rem;
 }
 
+.contact_horary {
+  color: var(--white-cream);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  text-align: center;
 
+  height: 4.875rem;
+  padding: 1.5rem;
+
+  border-radius: 2rem;
+  background: var(--purple);
+  box-shadow: 4px 4px 0 0 var(--grey-text-paragraph);
+}
+
+.contact_button {
+  display: flex;
+  padding: 1.5rem 4.34375rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  align-self: stretch;
+
+  border-radius: 624.9375rem;
+  border: 4px solid #2f2f2e;
+  background: #fbe351;
+  box-shadow: 8px 8px 0 0 #6a37d4;
+
+  color: #5d5200;
+  text-align: center;
+  font-family: "Plus Jakarta Sans";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 2rem; /* 133.333% */
+  letter-spacing: -0.075rem;
+  text-transform: uppercase;
+
+  
+}
