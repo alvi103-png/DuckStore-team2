@@ -1,12 +1,40 @@
 /*MOBILE VERSION*/
-.contact_main{
-    display: flex;
-    flex-direction: column;
-    margin: 4.06rem 1.25rem;
+.contact_main {
+  display: flex;
+  flex-direction: column;
+  margin: 4.06rem 1.25rem;
 }
 
-.contact_header{
-    display:flex;
-    flex-direction: column;
-    gap:3.44rem;
+.contact_header {
+  display: flex;
+  flex-direction: column;
+  gap: 3.44rem;
+}
+
+.contact_title {
+  gap: 0rem;
+}
+
+.contact_h1 {
+  text-align: center;
+  font-size: 2.75rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 2.7rem;
+  letter-spacing: -0.15rem;
+}
+
+.contact_h1_word {
+  color: var(--yellow);
+  text-align: center;
+  text-shadow: 4px 4px 0 var(--purple);
+  font-size: 3rem;
+}
+
+.contact_p {
+  color: var( --grey-text-paragraph);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2rem;
+  text-align: center;
 }
