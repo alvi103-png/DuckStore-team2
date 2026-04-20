@@ -10,6 +10,7 @@
 
 .card {
   display: flex;       /* Activa el diseño flexible */
+  justify-content: center;
   align-items: center; /* Centra el texto verticalmente respecto a la imagen */
   gap: 10px;           /* Espacio de separación entre imagen y texto */
   flex-wrap: wrap;
@@ -37,36 +38,43 @@
   width:80%;
 }
 .card__price {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #6A37D4;
-    font-style: italic;
+    font-style: normal;
     font-weight: bold;
 } 
 
 .card__quantity{ 
-  /* align-items: center; */
+  
   text-align: center;
-  border: 2px solid gray;
-  border-radius: 15px; 
+  /* Colores */
+  background-color: #fce8e6; /* Fondo rosado muy claro */
+  border: 1px solid #f9d2d0; /* Borde sutil (opcional para mayor definición) */
+
+  border-radius: 50px; 
+
   width:15%;
-  padding-left: 5;
+  padding: 2%;
   margin-bottom: 5%;
   min-width: 200px;
   font-size: 0.7rem;
-  color:red;
-  background-color:lightgrey;
-  font-style: italic;
+  /*color:red;*/
+  /* Estilo del texto */
+  color: #b32600;            /* Color naranja rojizo oscuro */
+
   font-weight: bold;
+  font-style: normal;
 }
 
-@media (man-width: 600px) { 
+@media (max-width: 600px) { 
   .card 
   { flex-direction: column;
+    width: 90%;  
    } 
    .card__content
    {
     min-width: 350px;
-     margin-left:5%;
+    margin-left:20%;  
    }
   }
 
