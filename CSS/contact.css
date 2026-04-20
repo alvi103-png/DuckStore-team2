@@ -198,3 +198,19 @@
   font-weight: 500;
   line-height: 1.25rem;
 }
+
+/*DESKTOP MEDIA QUERIES*/
+
+@media (min-width: 768px) {
+  .contact_main {
+    margin: 3.94rem 7.69rem;
+    gap: 5.19rem;
+  }
+
+  .contact_header {
+  flex-direction: row;
+  gap: 2rem;
+}
+
+
+}
