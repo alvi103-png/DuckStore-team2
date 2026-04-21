@@ -15,13 +15,13 @@
 .header_title {
   display: flex;
   flex-direction: column;
-  gap:3.44rem;
+  gap: 3.44rem;
 }
 
-.header_img{
-    display: flex;
-    flex-direction: column;
-    gap: 3.44rem;
+.header_img {
+  display: flex;
+  flex-direction: column;
+  gap: 3.44rem;
 }
 
 .contact_h1 {
@@ -210,29 +210,57 @@
 /*DESKTOP MEDIA QUERIES*/
 
 @media (min-width: 768px) {
-  .contact_header{
+  .contact_main {
+    gap: 5.19rem;
+  }
+
+  .contact_header {
     flex-direction: row;
     margin: 8.38rem auto;
-    gap:10.75rem;
+    gap: 10.75rem;
   }
 
-  .header_title{
+  .header_title {
     width: 36.875rem;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 
-  .contact_p{
+  .contact_p {
     text-align: left;
-    margin-bottom: 6.6rem;
+    margin-top: -4rem;
   }
 
-  .contact_title{
+  .contact_title {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
 
+  .header_img {
+    width: 26.8125rem;
+  }
 
+  .contact_img_container {
+    width: 26.8125rem;
+    height: 25.625rem;
+  }
 
+  .contact_h1,
+  .contact_h1_word {
+    font-size: 4.75rem;
+    text-align: left;
+    line-height: 5rem;
+  }
 
+  .contact_map_img {
+    height: 39.4375rem;
+    width: 74.5rem;
+    margin: 0.1rem auto;
+  }
+
+  .info_contact_container {
+    width: 74.5rem;
+    height: auto;
+    flex-direction: row;
+  }
 }
