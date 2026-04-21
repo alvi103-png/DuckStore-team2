@@ -1,3 +1,7 @@
+.detail_container{
+  flex:1;
+}
+
 .detailcard__image {
   width: 90%;   
   
