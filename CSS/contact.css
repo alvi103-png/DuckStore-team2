@@ -207,6 +207,12 @@
   line-height: 1.25rem;
 }
 
+.info_text_container{
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+  }
+
 /*DESKTOP MEDIA QUERIES*/
 
 @media (min-width: 768px) {
@@ -262,5 +268,11 @@
     width: 74.5rem;
     height: auto;
     flex-direction: row;
+  }
+
+  .info_text_container{
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
   }
 }
