@@ -1,9 +1,9 @@
 .detailcard__image {
-  /* width: 50%;        */
-  /* Ancho relativo a su contenedor */
+  width: 90%;   
+  
   max-width: 500px;  /* Tamaño máximo deseado */
   height: auto;      /* Mantiene la proporción automáticamente */
-  /* justify-content:center; */
+  
   border: 2px solid #6A37D4;
   border-radius: 15px; 
 
