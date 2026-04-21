@@ -1,4 +1,4 @@
-#Ducks Store 
+# Ducks Store 
 DuckStore es una pagina web realizada para una empresa que necesita lanzar sus productos que concretamente son patos de plástico.
 
 La web tiene las siguientes páginas:
@@ -11,9 +11,9 @@ Una página de contacto con un formulario.
 
 Una página de detalle con un patito que contiene nombre, imagen, descripción, precio y cantidad de stock.
 
-#Tabla de contenidos
-##Diseño
-###Enlaces Figma del PROTOTIPO, WIREFRAME de baja fidelidad y User Flow
+# Tabla de contenidos
+## Diseño
+### Enlaces Figma del PROTOTIPO, WIREFRAME de baja fidelidad y User Flow
 
 Wireframe de Baja definicion
 https://www.figma.com/design/UCCItoIzHXfQHgKYhSnhqj/Ducks-Store?node-id=0-1&p=f&t=xbpeuj1L7ILOoKpl-0
@@ -24,9 +24,9 @@ https://www.figma.com/design/UCCItoIzHXfQHgKYhSnhqj/Ducks-Store?node-id=1-2&p=f&
 User Flow
 https://www.figma.com/design/UCCItoIzHXfQHgKYhSnhqj/Ducks-Store?node-id=153-498&t=hahWsF5LtyAaYSBc-0
 
-##USER HISTORIES + CRITERIOS DE ACEPTACIÓN
+## USER HISTORIES + CRITERIOS DE ACEPTACIÓN
 
-###User History Landing Page
+### User History Landing Page
 ### Usuario objetivo
 Persona que entra por primera vez a la web sin conocer la marca.
 
@@ -95,7 +95,7 @@ Persona que entra por primera vez a la web sin conocer la marca.
 **Cuando** se ejecuta la acción 
 **Entonces** debe ser redirigido a la red social correspondiente....
 
-###User History Catalog Page
+### User History Catalog Page
 **Como** usuario, **quiero** ver una página de catálogo que muestre todos los patitos en venta, incluyendo al menos la imagen, el nombre y el precio de cada uno, **para** poder explorar los productos disponibles y decidir cuáles me interesa comprar.
 
 **Como** usuario, **quiero** ver en detalle el patito que me interesa **para** ver si me interesa comprarlo.
@@ -124,7 +124,7 @@ Dado que el usuario quiere identificar que elemento de la pagina es un botón. C
 
  
 
-###User History Detail Page
+### User History Detail Page
  Scenario: Visualización completa de la información del patito
 
 **Como** usuario interesado en comprar un patito, 
@@ -137,7 +137,7 @@ Dado que el usuario quiere identificar que elemento de la pagina es un botón. C
  **entonces** comprobaré que el nombre, la descripción, la imagen, el stock y el precio están presentes
  Comprobaré que los datos son suficientes y correctos
 
-##Estructura de la web
+## Estructura de la web
 ```
 
 
@@ -159,13 +159,13 @@ Dado que el usuario quiere identificar que elemento de la pagina es un botón. C
 └── README.md
 ```
 
-##Presentación
-###ENLACE PRESENTACIÓN CANVA
+## Presentación
+### ENLACE PRESENTACIÓN CANVA
 
 Presentacion Final
 https://www.canva.com/design/DAHG_6sH_DE/GrJQfxZnITkMzsBlOfje6g/edit
 
-##Tecnologias utilizadas
+## Tecnologias utilizadas
  Nuestro producto está realizado con las siguientes herramientas: 
 
 En Figma se han realizado los wireframes de baja fidelidad (sketch) y se han importado las maquetas realizadas en alta fidelidad
@@ -174,7 +174,7 @@ En Stich se han realizado los  prototipos que se convertiran en las maquetas de 
 
 En visual Code se desarrolla la web con HTML5 y CSS3.
 
-##Autores
+## Autores
 Nayeli C.M
 
 Viviana Andrango
