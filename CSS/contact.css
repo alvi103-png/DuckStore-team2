@@ -12,8 +12,16 @@
   gap: 3.44rem;
 }
 
-.contact_title {
-  gap: 0rem;
+.header_title {
+  display: flex;
+  flex-direction: column;
+  gap:3.44rem;
+}
+
+.header_img{
+    display: flex;
+    flex-direction: column;
+    gap: 3.44rem;
 }
 
 .contact_h1 {
@@ -202,15 +210,29 @@
 /*DESKTOP MEDIA QUERIES*/
 
 @media (min-width: 768px) {
-  .contact_main {
-    margin: 3.94rem 7.69rem;
-    gap: 5.19rem;
+  .contact_header{
+    flex-direction: row;
+    margin: 8.38rem auto;
+    gap:10.75rem;
   }
 
-  .contact_header {
-  flex-direction: row;
-  gap: 2rem;
-}
+  .header_title{
+    width: 36.875rem;
+    justify-content: flex-start;
+  }
+
+  .contact_p{
+    text-align: left;
+    margin-bottom: 6.6rem;
+  }
+
+  .contact_title{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
 
 
 }
