@@ -499,6 +499,16 @@ h1 {
   transition: background 0.8s ease;
 }
 
+
+/*ANIMACIONES HEADER*/
+.list_icon {
+  transition: transform 0.3s ease;
+}
+
+.label_hamburguesa:hover .list_icon {
+  transform: rotate(90deg);
+}
+
 /*MEDIA QUERIES*/
 @media (max-width: 768px) {
   .footer {
