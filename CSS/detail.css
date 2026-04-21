@@ -1,0 +1,80 @@
+.card__image {
+  width: 60%;       /* Ancho relativo a su contenedor */
+  max-width: 500px;  /* Tamaño máximo deseado */
+  height: auto;      /* Mantiene la proporción automáticamente */
+  /* justify-content:center; */
+  border: 2px solid #6A37D4;
+  border-radius: 15px; 
+  margin: 5%;
+}
+
+.card {
+  display: flex;       /* Activa el diseño flexible */
+  justify-content: center;
+  align-items: center; /* Centra el texto verticalmente respecto a la imagen */
+  gap: 10px;           /* Espacio de separación entre imagen y texto */
+  flex-wrap: wrap;
+}
+
+.card__content{
+  flex: 1;             /* Hace que el texto ocupe el resto del espacio */
+  margin-left:5%;
+}
+
+.card__name {
+    font-weight: bold;
+    color:black;
+}
+
+.card__description
+{
+  border: 2px solid gray;
+  border-radius: 15px; 
+  padding: 5%;
+  margin-left:0%;
+  margin-top: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  width:80%;
+}
+.card__price {
+    font-size: 1.5rem;
+    color: #6A37D4;
+    font-style: normal;
+    font-weight: bold;
+} 
+
+.card__quantity{ 
+  
+  text-align: center;
+  /* Colores */
+  background-color: #fce8e6; /* Fondo rosado muy claro */
+  border: 1px solid #f9d2d0; /* Borde sutil (opcional para mayor definición) */
+
+  border-radius: 50px; 
+
+  width:15%;
+  padding: 2%;
+  margin-bottom: 5%;
+  min-width: 200px;
+  font-size: 0.7rem;
+  /*color:red;*/
+  /* Estilo del texto */
+  color: #b32600;            /* Color naranja rojizo oscuro */
+
+  font-weight: bold;
+  font-style: normal;
+}
+
+@media (max-width: 600px) { 
+  .card 
+  { flex-direction: column;
+    width: 90%;  
+   } 
+   .card__content
+   {
+    min-width: 350px;
+    margin-left:20%;  
+   }
+  }
+
