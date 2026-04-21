@@ -159,7 +159,7 @@ body {
   height: auto;
   margin-bottom: 1rem;
 }
-.button_catalog {
+.landing_button_catalog {
   display: inline-flex;
   padding: 10px 10px;
   align-items: left;
@@ -174,7 +174,7 @@ body {
   left: 30px;
 }
 
-.button_catalog:hover {
+.landing_button_catalog:hover {
   cursor:pointer;
 }
 
@@ -349,7 +349,6 @@ body {
   box-shadow: 8px 8px 0 0 #6A37D4;
   margin: 2.5rem auto;
   padding: 40px;
-  overflow: hidden;
   background-color: rgba(250, 204, 21, 0.7);
   z-index: 1;
 }
@@ -479,7 +478,7 @@ body {
 
 /*ANIMACIONES LANDING PAGE*/
 
-.button_catalog:hover {
+.landing_button_catalog:hover {
   background: var(--yellow);
   color: var(--purple);
   transition: background 0.8s ease;
