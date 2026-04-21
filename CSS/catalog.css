@@ -88,6 +88,12 @@
   font-family: var(--font);
 }
 
+.button_catalog:hover {
+  background: var(--purple);
+  color: var(--white);
+  transition: background 0.5s ease;
+}
+
 /*DESKTOP VERSION MEDIA QUERIES*/
 
 @media (min-width: 768px) {
