@@ -1,5 +1,5 @@
 .DS_Store
+.env
+Thumbs.db
 .AppleDouble
 .LSOverride
-.env
-node_modules/
