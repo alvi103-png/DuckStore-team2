@@ -164,7 +164,7 @@ body {
   display: inline-flex;
   padding: 10px 10px;
   align-items: left;
-  font: "Plus Jakarta Sans", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 20px;
   color: white;
   gap: 8px;
