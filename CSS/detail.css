@@ -1,0 +1,87 @@
+.detail_container{
+  flex:1;
+}
+
+.detailcard__image {
+  width: 90%;   
+  
+  max-width: 500px;  /* Tamaño máximo deseado */
+  height: auto;      /* Mantiene la proporción automáticamente */
+  
+  border: 2px solid var(--purple);
+  border-radius: 15px; 
+
+}
+
+.detailcard {
+  margin:4rem 1rem;
+  display: flex;       /* Activa el diseño flexible */
+  flex-direction: column; /* Coloca los elementos en columna por defecto */
+  justify-content: center;
+  align-items: center; /* Centra el texto verticalmente respecto a la imagen */
+  gap: 3.5rem;           /* Espacio de separación entre imagen y texto */
+  
+} 
+
+.detailcard__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  width: 90%;
+  max-width: 500px;
+  
+}
+
+.detailcard__name {
+    font-weight: bold;
+    color:var(--black);
+}
+
+.detailcard__description
+{
+  border: 2px solid var(--card-description);
+  border-radius: 15px; 
+  padding: 5%;
+  /* margin-left:0%;
+  margin-top: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;  */
+  width:100%;
+}
+.detailcard__price {
+    font-size: 1.5rem;
+    color: var(--purple);
+    font-style: normal;
+    font-weight: bold;
+} 
+
+.detailcard__quantity{ 
+  
+  text-align: center;
+  /* Colores */
+  background-color: var(--detail-quantity-background); /* Fondo rosado muy claro */
+  border: 1px solid var(--detail-quantity-border); /* Borde sutil (opcional para mayor definición) */
+
+  border-radius: 50px; 
+
+  width:15%;
+  padding: 2%;
+  margin-bottom: 5%;
+  min-width: 200px;
+  font-size: 0.7rem;
+  /*color:red;*/
+  /* Estilo del texto */
+  color: var(--detail-quantity-text);            /* Color naranja rojizo oscuro */
+
+  font-weight: bold;
+  font-style: normal;
+}
+
+ @media (min-width: 768px) { 
+  .detailcard {
+    flex-direction: row; /* Cambia a fila en pantallas más grandes */
+    gap: 5rem;           /* Aumenta el espacio entre imagen y texto */
+  }
+
+ }
