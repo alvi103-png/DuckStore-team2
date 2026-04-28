@@ -293,6 +293,21 @@ label {
   cursor: pointer;
 }
 
+.form_mensaje{
+  margin-top: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.exito {
+  color: var(--purple);
+}
+
+.error {
+  color:red;
+}
+
 /*DESKTOP MEDIA QUERIES*/
 
 @media (min-width: 768px) {
@@ -371,7 +386,7 @@ label {
     width: 429px;
     height: 410px;
   }
-}
+  
 
 /*.contact_img_container {
     width: 26.8125rem;
@@ -386,13 +401,13 @@ label {
     line-height: 5rem;
   }
 
-  /* .contact_map_img {
+   .contact_map_img {
     height: 644px;
     width: 423px;
     margin: 0.1rem auto;
   }
 
-  .info_contact_container {
+  /*.info_contact_container {
     width: 74.5rem;
     height: auto;
     flex-direction: row;
@@ -402,5 +417,5 @@ label {
     display: flex;
     flex-direction: column;
     gap:3rem;
-  }
-} /*
+  }*/
+}
