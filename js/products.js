@@ -122,15 +122,31 @@ function renderpatitos(patitos)
     const card = document.createElement("article");
     card.classList.add("card");
 
+    // card.innerHTML = `
+    //     <img src="${pato.imagen}" alt="${pato.alt}" class="card_img">
+    //     <h2 class="h2_catalog">${pato.nombre}</h2>
+    //     <p class="p_catalog">${pato.precio}</p>
+    //     <button class="button_catalog">
+    //     ${pato.link 
+    //         ? `<a href="${pato.link}">VER DETALLES</a>` 
+    //         : "VER DETALLES"}
+    //     </button>
+    // `;
+
     card.innerHTML = `
         <img src="${pato.imagen}" alt="${pato.alt}" class="card_img">
         <h2 class="h2_catalog">${pato.nombre}</h2>
         <p class="p_catalog">${pato.precio}</p>
+        <div id="capabotones">
         <button class="button_catalog">
-        ${pato.link 
-            ? `<a href="${pato.link}">VER DETALLES</a>` 
-            : "VER DETALLES"}
+            <i class="fas fa-shopping-cart"></i>
         </button>
+         <button class="button_catalog">
+           ${pato.link 
+             ? `<a href="${pato.link}"><i class="fa-solid fa-eye"></i></a>` 
+             : '<i class="fa-solid fa-eye"></i>'}
+        </button>   
+        </div> 
     `;
 
     catalogo.appendChild(card);
