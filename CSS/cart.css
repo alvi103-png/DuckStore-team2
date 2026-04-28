@@ -1,0 +1,40 @@
+/*MOBILE VERSION CART*/
+.cart__container{
+    display: flex;
+    flex-direction: column;
+}
+
+.cart__title{
+    display: flex;
+    flex-direction: row;
+}
+
+.card__container{
+    display: flex;
+    flex-direction: column;
+}
+
+.card__product{
+    display: flex;
+    flex-direction: row;
+}
+
+.card__product__content{
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout__container{
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout__content{
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout__subtotal__container,.checkout__total__container{
+    display: flex;
+    flex-direction: row;
+}
