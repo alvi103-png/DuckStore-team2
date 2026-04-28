@@ -43,10 +43,6 @@
   border: 2px solid var(--card-description);
   border-radius: 15px; 
   padding: 5%;
-  /* margin-left:0%;
-  margin-top: 5%;
-  margin-right: 5%;
-  margin-bottom: 5%;  */
   width:100%;
 }
 .detailcard__price {
@@ -70,13 +66,16 @@
   margin-bottom: 5%;
   min-width: 200px;
   font-size: 0.7rem;
-  /*color:red;*/
   /* Estilo del texto */
   color: var(--detail-quantity-text);            /* Color naranja rojizo oscuro */
 
   font-weight: bold;
   font-style: normal;
 }
+    
+    .detailcard__buttoncarrito{
+      gap: 10px;
+    } 
 
  @media (min-width: 768px) { 
   .detailcard {
