@@ -1,31 +1,36 @@
 function creaArraypatitos(){
-    const patitos = [
+    const arrayPatitos = [
   {
     nombre: "EL ORIGINAL",
+    categoria: "otros",
     precio: "12.99 €",
     imagen: "./assets/images/original.png",
     alt: "Pato de goma amarillo clásico"
   },
   {
     nombre: "CHEFSITO",
+    categoria: "profesiones",
     precio: "12.99 €",
     imagen: "./assets/images/cocinero.jpg",
     alt: "Pato de goma amarillo disfrazado de cocinero"
   },
   {
     nombre: "DRÁCUACK",
+    categoria: "peliculas",
     precio: "12.99 €",
     imagen: "./assets/images/vampiro.jpg",
     alt: "Pato de goma amarillo disfrazado de drácula"
   },
   {
     nombre: "VACUACK",
+    categoria: "peliculas",
     precio: "12.99 €",
     imagen: "./assets/images/vaquero.jpg",
     alt: "Pato de goma amarillo disfrazado de vaquero"
   },
   {
     nombre: "GUA-FI",
+    categoria: "profesiones",
     precio: "12.99 €",
     imagen: "./assets/images/informatico.jpg",
     alt: "Pato de goma amarillo disfrazado de programador",
@@ -33,71 +38,85 @@ function creaArraypatitos(){
   },
   {
     nombre: "MAGO ALAKACUÁ",
+    categoria: "profesiones",
     precio: "12.99 €",
     imagen: "./assets/images/mago.jpg",
     alt: "Pato de goma amarillo disfrazado de mago"
   },
   {
     nombre: "VIKINGO",
+    categoria: "peliculas",
     precio: "12.99 €",
     imagen: "./assets/images/vikingo.jpg",
     alt: "Pato de goma amarillo disfrazado de vikingo"
   },
   {
     nombre: "PRINCESA PLUMA",
+    categoria: "otros",
     precio: "12.99 €",
     imagen: "./assets/images/princesa.jpg",
     alt: "Pato de goma amarillo disfrazado de princesa"
   },
   {
     nombre: "CUAKERO",
+    categoria: "profesiones",
     precio: "12.99 €",
     imagen: "./assets/images/rockero.jpg",
     alt: "Pato de goma amarillo disfrazado de roquero"
   },
   {
     nombre: "HOLMESITO",
+    
     precio: "12.99 €",
     imagen: "./assets/images/holmes.jpg",
     alt: "Pato de goma amarillo disfrazado de Sherlock Holmes"
   },
   {
     nombre: "NINJACUACK",
+    categoria: "otros",
     precio: "12.99 €",
     imagen: "./assets/images/ninja.jpg",
     alt: "Pato de goma amarillo disfrazado de ninja"
   },
   {
     nombre: "CUACTABLE",
+    categoria: "profesiones",
     precio: "12.99 €",
     imagen: "./assets/images/contable.jpg",
     alt: "Pato de goma amarillo disfrazado de contable"
   },
   {
     nombre: "SUPERCUAC",
+    categoria: "peliculas",
     precio: "12.99 €",
     imagen: "./assets/images/super.jpg",
     alt: "Pato de goma amarillo disfrazado de Superman"
   },
   {
     nombre: "ASTROCUAC",
+    categoria: "profesiones",
     precio: "12.99 €",
     imagen: "./assets/images/astronauta.jpg",
     alt: "Pato de goma amarillo disfrazado de astronauta"
   },
   {
     nombre: "CAPITÁN PARCHE",
+    categoria: "otros",
     precio: "12.99 €",
     imagen: "./assets/images/pirata.jpg",
     alt: "Pato de goma amarillo disfrazado de pirata"
   }
 ];
-    return patitos;
+    return arrayPatitos;
 }
 
 function renderpatitos(patitos)
 {
     const catalogo = document.getElementById("catalog");
+
+    //si renderizamos sin limpiar catalogo se duplicarian los patitos
+    //limpiar los elementos del catalogo
+    catalogo.innerHTML = "";
 
     patitos.forEach(pato => {
     const card = document.createElement("article");
@@ -116,7 +135,20 @@ function renderpatitos(patitos)
 
     catalogo.appendChild(card);
 });
-
 }
 
-export {creaArraypatitos, renderpatitos}
+function filtrarCategoria(listaPatitos, filtrocategoria){
+    alert ("evento filtrar categoria");
+    if (filtrocategoria!="todos") 
+    {
+        const patitosfiltrados = listaPatitos.filter(cat => cat.categoria === filtrocategoria);
+        renderpatitos(patitosfiltrados);
+    }
+    else
+    {
+        renderpatitos(listaPatitos);
+    }    
+   
+}
+
+export {creaArraypatitos, renderpatitos,filtrarCategoria}
