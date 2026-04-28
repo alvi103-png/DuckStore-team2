@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duck Store</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+         <nav class="navbar">
+            <img src="assets/images/logo.svg" alt="Logo" class="logo">
+            <div class="nav__icons">
+            <a href="cart.html"><i class="fas fa-shopping-cart list_icon"></i></a>
+            <label class="label_hamburguesa"for="menu_hamburguesa">
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="45" 
+                    height="45" 
+                    fill="currentColor" 
+                    class="list_icon" 
+                    viewBox="0 0 16 16"
+                >
+                
+                    <path
+                        fill-rule="evenodd" 
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            
+                </svg>
+            </label>
+            </div>
+            <input type="checkbox" id="menu_hamburguesa" class="menu_hamburguesa">
+
+            <ul class="ul_links">
+                <li class="li_links">
+                    <a href="index.html" class="link">Inicio</a>
+                </li>
+                <li class="li_links">
+                    <a href="catalog.html" class="link">Catálogo</a>
+                </li>
+                <li class="li_links">
+                    <a href="contact.html" class="link">Contacto</a>
+                </li>
+              
+            </ul>
+            
+
+     </header>
+
+     <main>
+        <section class="cart__container">
+        <div class="cart__title">
+            <h1 class="cart__h1">TU CARRITO</h1>
+            <span class="cart__counter">3 items</span>
+        </div>
+        <div class="card__container">
+            <article class="card__product">
+                <img src="./assets/images/informatico.jpg" alt="Pato de goma amarillo disfrazado de programador">
+                <div class="card__product__content">
+                    <h3 class="card__product__title">GUA-FI</h3>
+                    <p class="card__product__price">12.99 €</p>
+                    <div class="stepper">
+                        <button class="stepper__btn stepper__btn--minus">−</button>
+                        <span class="stepper__value">1</span>
+                        <button class="stepper__btn stepper__btn--plus">+</button>
+                    </div>
+                </div>
+                <i class="fa-solid fa-trash-can"></i>
+            </article>
+            <article class="card__product">
+                <img src="./assets/images/vampiro.jpg" alt="Pato de goma amarillo disfrazado de drácula">
+                <div class="card__product__content">
+                    <h3 class="card__product__title">GUA-FI</h3>
+                    <p class="card__product__price">12.99 €</p>
+                    <div class="stepper">
+                        <button class="stepper__btn stepper__btn--minus">−</button>
+                        <span class="stepper__value">1</span>
+                        <button class="stepper__btn stepper__btn--plus">+</button>
+                    </div>
+                </div>
+                <i class="fa-solid fa-trash-can"></i>
+            </article>
+        </div>
+        <article class="checkout__container">
+            <div class="checkout__content">
+                <h4 class="checkout__subtotal">SUBTOTAL</h4>
+                <p class="checkout__subtotal__price">25.98 €</p>
+                <h4 class="checkout__total">TOTAL</h4>
+                <p class="checkout__total__price">25.98€</p>
+            </div>
+            <button class="button_catalog checkout__button">FINALIZAR COMPRA</button>
+        </article>
+        </section>
+     </main>
+     
+<footer class="footer">
+        <div class="copy-container">
+        <p class="naming-footer">Duck Store</p>
+        <p class="copyright-footer">DUCK STORE © 2024. KEEP IT QUACKIN'.</p>
+        </div>
+
+        <nav class="rrss-footer-container">
+            <ul>
+            <li class="insta-icon">
+                <a href="https://instagram.com/tu-usuario" target="_blank">
+                    <img src="assets/icons/instagram.svg" alt="Instagram icon" class="social-icon">
+                </a>
+            </li>
+
+            <li class="facebook-icon">
+                <a href="https://www.facebook.com/?locale=es_ES" target="_blank">
+                    <img src="assets/icons/facebook.svg" alt="Facebook icon" class="social-icon">
+                </a>
+            </li>
+
+            <li class="tiktok-icon">
+                <a href="https://www.tiktok.com/es-419/" target="_blank">
+                    <img src="assets/icons/tiktok.svg" alt="Tiktok icon" class="social-icon">
+                </a>
+            </li>
+        </ul>
+        </nav>
+
+        <button class="contact-button"><a href="mailto:duckstore.bcn@example.com" target="_blank">CONTÁCTANOS</a></button>
+
+     </footer>
+       
+    
+    
+  
+</body>
+</html>
