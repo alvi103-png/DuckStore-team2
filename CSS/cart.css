@@ -1,40 +1,216 @@
 /*MOBILE VERSION CART*/
-.cart__container{
-    display: flex;
-    flex-direction: column;
+.cart__container {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5rem 1.25rem;
 }
 
-.cart__title{
-    display: flex;
-    flex-direction: row;
+.cart__title {
+  display: flex;
+  flex-direction: row;
 }
 
-.card__container{
-    display: flex;
-    flex-direction: column;
+.card__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.94rem;
+  margin: 3.19rem auto;
 }
 
-.card__product{
-    display: flex;
-    flex-direction: row;
+.card__product {
+  display: flex;
+  flex-direction: row;
+
+  padding: 1.19rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.12rem;
+  align-self: stretch;
+
+  border-radius: 3rem;
+  border: 3px solid var(--grey-dark-landing-button);
+  background: var(--white);
+  box-shadow: 6px 6px 0 0 var(--grey-dark-landing-button);
 }
 
-.card__product__content{
-    display: flex;
-    flex-direction: column;
+.card__product__content {
+  display: flex;
+  flex-direction: column;
 }
 
-.checkout__container{
-    display: flex;
-    flex-direction: column;
+.checkout__container {
+  display: flex;
+  flex-direction: column;
 }
 
-.checkout__content{
-    display: flex;
-    flex-direction: column;
+.checkout__content {
+  display: flex;
+  flex-direction: column;
 }
 
-.checkout__subtotal__container,.checkout__total__container{
-    display: flex;
-    flex-direction: row;
+.checkout__subtotal__container,
+.checkout__total__container {
+  display: flex;
+  flex-direction: row;
 }
+
+/*Contenedor titulo*/
+.cart__title {
+  display: flex;
+  gap: 5.44rem;
+}
+
+.cart__h1 {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 28px;
+  letter-spacing: -0.9px;
+}
+
+.cart__counter {
+  display: flex;
+  padding: 4px 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 9999px;
+  border: 3px solid var(--purple);
+  background: rgba(106, 55, 210, 0.15);
+
+  color: var(--purple);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+}
+
+.card__product__img {
+  display: flex;
+  height: 6.1875rem;
+  aspect-ratio: 1/1;
+
+  border-radius: 1rem;
+  border: 3px solid var(--purple);
+}
+
+.card__product__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  width: 7.28813rem;
+}
+
+.card__product__title {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 2.25rem;
+  letter-spacing: -0.04688rem;
+}
+
+.card__product__price {
+  color: var(--purple);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+
+.stepper {
+  display: flex;
+  padding: 0.25rem 0.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+
+  border-radius: 624.9375rem;
+  border: 3px solid var(--grey-dark-landing-button);
+  background: var(--grey);
+}
+
+.stepper__value {
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.5rem;
+}
+
+.stepper__btn {
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+
+  border-style: none;
+  background-color: var(--grey);
+}
+
+.stepper__btn:hover {
+  cursor: pointer;
+}
+
+.fa-trash-can {
+  color: var(--red);
+  margin-right: 0.2rem;
+}
+
+.checkout__container {
+  display: flex;
+  height: 20.0625rem;
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.8125rem;
+  flex-shrink: 0;
+  align-self: stretch;
+
+  border-radius: 3rem;
+  border: 3px solid var(--grey-dark-landing-button);
+  background: #dac9ff;
+  box-shadow: 8px 8px 0 0 var(--purple);
+}
+
+.checkout__subtotal__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 8.97rem;
+}
+
+.checkout__subtotal {
+  color: var(--purple);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  letter-spacing: 0.025rem;
+}
+
+.checkout__subtotal__price {
+  color: var(--purple);
+  font-weight: 400;
+}
+
+hr {
+  margin: 2.19rem auto;
+  height: 0.25rem;
+  align-self: stretch;
+  width: 18.5rem;
+
+  background: rgba(85, 23, 191, 0.2);
+  border-style: none;
+}
+
+.checkout__total__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 8.97rem;
+}
+
+.checkout__total,.checkout__total__price {
+  color: var(--purple);
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 2rem;
+}
+
+
