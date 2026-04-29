@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+    <script src="js/cart.js" type="module"></script>
+    <script src="js/renderCart.js" type="module"></script>
     <header class="header">
          <nav class="navbar">
             <img src="assets/images/logo.svg" alt="Logo" class="logo">
@@ -58,19 +60,19 @@
             <span class="cart__counter">3 items</span>
         </div>
         <div class="sections__container">
-        <div class="card__container">
-            <article class="card__product">
+        <div class="card__container" id="cart-container">
+            <!-- <article class="card__product">
                 <img src="./assets/images/informatico.jpg" alt="Pato de goma amarillo disfrazado de programador" class="card__product__img">
                 <div class="card__product__content">
                     <h3 class="card__product__title">GUA-FI</h3>
                     <p class="card__product__price">12.99 €</p>
                     <div class="stepper">
-                        <button class="stepper__btn stepper__btn--minus">−</button>
+                        <button class="stepper__btn stepper__btn--minus" id="decrease">−</button>
                         <span class="stepper__value">1</span>
-                        <button class="stepper__btn stepper__btn--plus">+</button>
+                        <button class="stepper__btn stepper__btn--plus" id="increase">+</button>
                     </div>
                 </div>
-                <i class="fa-solid fa-trash-can"></i>
+                <i class="fa-solid fa-trash-can" id="remove"></i>
             </article>
             <article class="card__product">
                 <img src="./assets/images/vampiro.jpg" alt="Pato de goma amarillo disfrazado de drácula" class="card__product__img">
@@ -84,7 +86,7 @@
                     </div>
                 </div>
                 <i class="fa-solid fa-trash-can"></i>
-            </article>
+            </article> -->
         </div>
         <article class="checkout__container">
             <div class="checkout__content">
