@@ -76,6 +76,16 @@ body {
   color: var(--purple);
   cursor: pointer;
 }
+.nav__icons{
+  display: flex;
+  align-items: center;
+  gap:1rem;
+}
+
+.fa-shopping-cart {
+    font-size: 2rem; /* Ajusta según necesites */
+}
+
 .ul_links {
   width: 100%;
   background-color: var(--purple);
@@ -538,6 +548,11 @@ display: flex;
 /* QUERYS PARA RESPONSIVE DESIGN */
 
 @media (min-width: 768px) {
+
+  .nav__icons{
+    gap:7.63rem;
+  }
+
   .container1 {
     max-width: 800px; /* Más ancho en PC */
     padding: 60px;
