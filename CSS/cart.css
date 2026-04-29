@@ -14,7 +14,6 @@
   display: flex;
   flex-direction: column;
   gap: 1.94rem;
-  margin: 3.19rem auto;
 }
 
 .card__product {
@@ -46,12 +45,16 @@
 .checkout__content {
   display: flex;
   flex-direction: column;
+  width: 18.5rem;
+  min-width: 0;
 }
 
 .checkout__subtotal__container,
 .checkout__total__container {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  gap:0rem;
 }
 
 /*Contenedor titulo*/
@@ -171,11 +174,6 @@
   box-shadow: 8px 8px 0 0 var(--purple);
 }
 
-.checkout__subtotal__container {
-  display: flex;
-  justify-content: space-between;
-  gap: 8.97rem;
-}
 
 .checkout__subtotal {
   color: var(--purple);
@@ -200,11 +198,6 @@ hr {
   border-style: none;
 }
 
-.checkout__total__container {
-  display: flex;
-  justify-content: space-between;
-  gap: 8.97rem;
-}
 
 .checkout__total,
 .checkout__total__price {
@@ -212,6 +205,13 @@ hr {
   font-size: 1.5rem;
   font-weight: 900;
   line-height: 2rem;
+}
+
+.sections__container{
+  display: flex;
+  flex-direction: column;
+   margin: 2.5rem 1.25rem;
+   gap:3.19rem;
 }
 
 /*DESKTOP VERSION CART*/
@@ -270,13 +270,17 @@ hr {
     font-size: 2rem;
   }
 
+  .fa-trash-can:hover{
+    cursor: pointer;
+  }
+
   .checkout__container{
     width: 46rem;
     height: 24.125rem;
     gap:3.81rem;
     align-items: center;
     padding:3.44rem 1.81rem;
-    align-self: center;
+    align-self: flex-start;
   }
 
   .checkout__content{
@@ -285,5 +289,13 @@ hr {
 
   hr{
     width: 100%;
+  }
+
+  .sections__container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap:1.69rem;
+    justify-content: center;
   }
 }
