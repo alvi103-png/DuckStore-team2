@@ -19,8 +19,16 @@ form.addEventListener("submit", function(e) {
     mensajeUI.textContent = "Mensaje enviado correctamente!";
     mensajeUI.classList.add("exito");
 
+    if (!nombre || !email || !mensajeUsuario) {
+        mensajeUI.textContent = "Por favor completa todos los campos";
+        mensajeUI.classList.add("error");
+        
+        return;
+    }
+
 
     form.reset();
 
 
 });
+

@@ -305,7 +305,7 @@ label {
 }
 
 .error {
-  color:red;
+  color: var(--purple);
 }
 
 /*DESKTOP MEDIA QUERIES*/
@@ -357,13 +357,15 @@ label {
 
 @media (min-width: 768px) {
   .contact_main {
-    gap: 5.19rem;
+    gap: auto;
   }
 
   .contact_header {
     flex-direction: row;
     margin: 8.38rem auto;
-    gap: 10.75rem;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
   }
 
   .header_title {
@@ -373,7 +375,7 @@ label {
 
   .contact_p {
     text-align: left;
-    margin-top: -4rem;
+    margin-top: 4rem;
   }
 
   .contact_title {
@@ -383,16 +385,24 @@ label {
   }
 
   .header_img {
-    width: 429px;
-    height: 410px;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    height: auto;
   }
   
 
-/*.contact_img_container {
-    width: 26.8125rem;
-    height: 25.625rem;
+.contact_img_container {
+    width: 100%;
+    height: auto;
     flex-shrink: 0
-}*/
+}
+
+.contact_img_container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 
   .contact_h1,
   .contact_h1_word {
