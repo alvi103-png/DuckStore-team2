@@ -70,6 +70,7 @@
 #capabotones{
   display: flex;
   flex-direction:row;
+  gap: 1.31rem; /* ajusta el espacio a tu gusto */
 }
 
 .button_catalog {
