@@ -1,6 +1,7 @@
 function creaArraypatitos(){
     const arrayPatitos = [
   {
+    id:1,
     nombre: "EL ORIGINAL",
     categoria: "otros",
     precio: "12.99 €",
@@ -8,6 +9,7 @@ function creaArraypatitos(){
     alt: "Pato de goma amarillo clásico"
   },
   {
+    id:2,
     nombre: "CHEFSITO",
     categoria: "profesiones",
     precio: "12.99 €",
@@ -15,6 +17,7 @@ function creaArraypatitos(){
     alt: "Pato de goma amarillo disfrazado de cocinero"
   },
   {
+    id:3,
     nombre: "DRÁCUACK",
     categoria: "peliculas",
     precio: "12.99 €",
@@ -22,6 +25,7 @@ function creaArraypatitos(){
     alt: "Pato de goma amarillo disfrazado de drácula"
   },
   {
+    id:4,
     nombre: "VACUACK",
     categoria: "peliculas",
     precio: "12.99 €",
@@ -29,6 +33,7 @@ function creaArraypatitos(){
     alt: "Pato de goma amarillo disfrazado de vaquero"
   },
   {
+    id:5,
     nombre: "GUA-FI",
     categoria: "profesiones",
     precio: "12.99 €",
@@ -37,6 +42,7 @@ function creaArraypatitos(){
     link: "detail.html"
   },
   {
+    id:6,
     nombre: "MAGO ALAKACUÁ",
     categoria: "profesiones",
     precio: "12.99 €",
@@ -44,6 +50,7 @@ function creaArraypatitos(){
     alt: "Pato de goma amarillo disfrazado de mago"
   },
   {
+    id:7,
     nombre: "VIKINGO",
     categoria: "peliculas",
     precio: "12.99 €",
@@ -51,6 +58,7 @@ function creaArraypatitos(){
     alt: "Pato de goma amarillo disfrazado de vikingo"
   },
   {
+    id:8,
     nombre: "PRINCESA PLUMA",
     categoria: "otros",
     precio: "12.99 €",
@@ -58,6 +66,7 @@ function creaArraypatitos(){
     alt: "Pato de goma amarillo disfrazado de princesa"
   },
   {
+    id:9,
     nombre: "CUAKERO",
     categoria: "profesiones",
     precio: "12.99 €",
@@ -65,13 +74,15 @@ function creaArraypatitos(){
     alt: "Pato de goma amarillo disfrazado de roquero"
   },
   {
+    id:10,
     nombre: "HOLMESITO",
-    
+    categoria: "peliculas",
     precio: "12.99 €",
     imagen: "./assets/images/holmes.jpg",
     alt: "Pato de goma amarillo disfrazado de Sherlock Holmes"
   },
   {
+    id:11,
     nombre: "NINJACUACK",
     categoria: "otros",
     precio: "12.99 €",
@@ -79,6 +90,7 @@ function creaArraypatitos(){
     alt: "Pato de goma amarillo disfrazado de ninja"
   },
   {
+    id:12,
     nombre: "CUACTABLE",
     categoria: "profesiones",
     precio: "12.99 €",
@@ -86,6 +98,7 @@ function creaArraypatitos(){
     alt: "Pato de goma amarillo disfrazado de contable"
   },
   {
+    id:13,
     nombre: "SUPERCUAC",
     categoria: "peliculas",
     precio: "12.99 €",
@@ -93,6 +106,7 @@ function creaArraypatitos(){
     alt: "Pato de goma amarillo disfrazado de Superman"
   },
   {
+    id:14,
     nombre: "ASTROCUAC",
     categoria: "profesiones",
     precio: "12.99 €",
@@ -100,6 +114,7 @@ function creaArraypatitos(){
     alt: "Pato de goma amarillo disfrazado de astronauta"
   },
   {
+    id:15,
     nombre: "CAPITÁN PARCHE",
     categoria: "otros",
     precio: "12.99 €",
