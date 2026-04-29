@@ -28,7 +28,7 @@ function creaArraypatitos(){
     id:4,
     nombre: "VACUACK",
     categoria: "peliculas",
-    precio: "12.99 €",
+    precio: "12.99",
     imagen: "./assets/images/vaquero.jpg",
     alt: "Pato de goma amarillo disfrazado de vaquero"
   },
