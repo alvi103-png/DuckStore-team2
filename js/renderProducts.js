@@ -4,7 +4,7 @@ function creaArraypatitos(){
     id:1,
     nombre: "EL ORIGINAL",
     categoria: "otros",
-    precio: "12.99 €",
+    precio: "12.99",
     imagen: "./assets/images/original.png",
     alt: "Pato de goma amarillo clásico"
   },
@@ -12,7 +12,7 @@ function creaArraypatitos(){
     id:2,
     nombre: "CHEFSITO",
     categoria: "profesiones",
-    precio: "12.99 €",
+    precio: "12.99",
     imagen: "./assets/images/cocinero.jpg",
     alt: "Pato de goma amarillo disfrazado de cocinero"
   },
@@ -20,7 +20,7 @@ function creaArraypatitos(){
     id:3,
     nombre: "DRÁCUACK",
     categoria: "peliculas",
-    precio: "12.99 €",
+    precio: "12.99",
     imagen: "./assets/images/vampiro.jpg",
     alt: "Pato de goma amarillo disfrazado de drácula"
   },
@@ -36,7 +36,7 @@ function creaArraypatitos(){
     id:5,
     nombre: "GUA-FI",
     categoria: "profesiones",
-    precio: "12.99 €",
+    precio: "12.99",
     imagen: "./assets/images/informatico.jpg",
     alt: "Pato de goma amarillo disfrazado de programador",
     link: "detail.html"
@@ -45,7 +45,7 @@ function creaArraypatitos(){
     id:6,
     nombre: "MAGO ALAKACUÁ",
     categoria: "profesiones",
-    precio: "12.99 €",
+    precio: "12.99",
     imagen: "./assets/images/mago.jpg",
     alt: "Pato de goma amarillo disfrazado de mago"
   },
@@ -53,7 +53,7 @@ function creaArraypatitos(){
     id:7,
     nombre: "VIKINGO",
     categoria: "peliculas",
-    precio: "12.99 €",
+    precio: "12.99",
     imagen: "./assets/images/vikingo.jpg",
     alt: "Pato de goma amarillo disfrazado de vikingo"
   },
@@ -61,7 +61,7 @@ function creaArraypatitos(){
     id:8,
     nombre: "PRINCESA PLUMA",
     categoria: "otros",
-    precio: "12.99 €",
+    precio: "12.99",
     imagen: "./assets/images/princesa.jpg",
     alt: "Pato de goma amarillo disfrazado de princesa"
   },
@@ -69,7 +69,7 @@ function creaArraypatitos(){
     id:9,
     nombre: "CUAKERO",
     categoria: "profesiones",
-    precio: "12.99 €",
+    precio: "12.99",
     imagen: "./assets/images/rockero.jpg",
     alt: "Pato de goma amarillo disfrazado de roquero"
   },
@@ -77,7 +77,7 @@ function creaArraypatitos(){
     id:10,
     nombre: "HOLMESITO",
     categoria: "peliculas",
-    precio: "12.99 €",
+    precio: "12.99",
     imagen: "./assets/images/holmes.jpg",
     alt: "Pato de goma amarillo disfrazado de Sherlock Holmes"
   },
@@ -85,7 +85,7 @@ function creaArraypatitos(){
     id:11,
     nombre: "NINJACUACK",
     categoria: "otros",
-    precio: "12.99 €",
+    precio: "12.99",
     imagen: "./assets/images/ninja.jpg",
     alt: "Pato de goma amarillo disfrazado de ninja"
   },
@@ -93,7 +93,7 @@ function creaArraypatitos(){
     id:12,
     nombre: "CUACTABLE",
     categoria: "profesiones",
-    precio: "12.99 €",
+    precio: "12.99",
     imagen: "./assets/images/contable.jpg",
     alt: "Pato de goma amarillo disfrazado de contable"
   },
@@ -101,7 +101,7 @@ function creaArraypatitos(){
     id:13,
     nombre: "SUPERCUAC",
     categoria: "peliculas",
-    precio: "12.99 €",
+    precio: "12.99",
     imagen: "./assets/images/super.jpg",
     alt: "Pato de goma amarillo disfrazado de Superman"
   },
@@ -109,7 +109,7 @@ function creaArraypatitos(){
     id:14,
     nombre: "ASTROCUAC",
     categoria: "profesiones",
-    precio: "12.99 €",
+    precio: "12.99",
     imagen: "./assets/images/astronauta.jpg",
     alt: "Pato de goma amarillo disfrazado de astronauta"
   },
@@ -117,7 +117,7 @@ function creaArraypatitos(){
     id:15,
     nombre: "CAPITÁN PARCHE",
     categoria: "otros",
-    precio: "12.99 €",
+    precio: "12.99",
     imagen: "./assets/images/pirata.jpg",
     alt: "Pato de goma amarillo disfrazado de pirata"
   }
@@ -151,7 +151,7 @@ function renderpatitos(patitos)
     card.innerHTML = `
         <img src="${pato.imagen}" alt="${pato.alt}" class="card_img">
         <h2 class="h2_catalog">${pato.nombre}</h2>
-        <p class="p_catalog">${pato.precio}</p>
+        <p class="p_catalog">${pato.precio} €</p>
         <div id="capabotones">
         <button class="button_catalog">
             <i class="fas fa-shopping-cart"></i>
