@@ -1,6 +1,6 @@
 // importamos los metodos que cargan el array de productos
 // y que renderiza los productos en el DOM
-import {creaArraypatitos, renderpatitos, filtrarCategoria} from './renderproducts.js'
+import {creaArraypatitos, renderpatitos, filtrarCategoria, addToCart} from './renderproducts.js'
 
 let patitos = [];
 
