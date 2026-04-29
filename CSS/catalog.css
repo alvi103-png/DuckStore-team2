@@ -106,6 +106,26 @@
   cursor: pointer;
 }
 
+#filtroCategoria{
+  border:0;
+  padding: 0.4375rem 2rem;
+
+  border-radius: 62.4375rem;
+border: 1px solid #6A37D4;
+background: rgba(106, 55, 212, 0.17);
+
+color: #6A37D2;
+text-align: center;
+font-family: "Plus Jakarta Sans";
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 700;
+line-height: 1.25rem; /* 142.857% */
+
+display: flex;
+justify-content: space-evenly;
+}
+
 /*DESKTOP VERSION MEDIA QUERIES*/
 
 @media (min-width: 768px) {
