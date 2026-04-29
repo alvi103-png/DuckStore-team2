@@ -4,71 +4,85 @@ import {
   increaseQuantity,
   decreaseQuantity,
   removeFromCart
-} from "./renderCart.js";
+} from "./cart.js";
 
 const container = document.getElementById("cart-container");
+const subtotalContainer = document.querySelector(".checkout__subtotal__price");
+const totalContainer = document.querySelector(".checkout__total__price");
+const counter = document.querySelector(".cart__counter");
 
 function renderCart() {
   const cart = getCart();
 
+  // 🟣 Carrito vacío
   if (cart.length === 0) {
-    container.innerHTML = "<p>El carrito está vacío</p>";
+    container.innerHTML = `<p>El carrito está vacío</p>`;
+    subtotalContainer.textContent = "0€";
+    totalContainer.textContent = "0€";
+    counter.textContent = "0 items";
     return;
   }
 
-  container.innerHTML = `
-    ${cart
-      .map(
-        (item) => `
-        <div class="cart-item">
-          <h3>${item.name}</h3>
-          <p>Precio: ${item.price}€</p>
-          <p>Subtotal: ${item.price * item.quantity}€</p>
+  // 🟣 Render productos
+  container.innerHTML = cart.map(item => `
+    <article class="card__product">
+      <img src="${item.image}" alt="${item.name}" class="card__product__img">
 
-          <div>
-            <button data-id="${item.id}" class="decrease">-</button>
-            <span>${item.quantity}</span>
-            <button data-id="${item.id}" class="increase">+</button>
-          </div>
+      <div class="card__product__content">
+        <h3 class="card__product__title">${item.name}</h3>
+        <p class="card__product__price">${item.price} €</p>
 
-          <button data-id="${item.id}" class="remove">Eliminar</button>
+        <div class="stepper">
+          <button class="stepper__btn stepper__btn--minus" data-id="${item.id}">−</button>
+          <span class="stepper__value">${item.quantity}</span>
+          <button class="stepper__btn stepper__btn--plus" data-id="${item.id}">+</button>
         </div>
-      `
-      )
-      .join("")}
 
-    <hr />
+        <p>Subtotal: ${(item.price * item.quantity).toFixed(2)} €</p>
+      </div>
 
-    <h2>Total: ${getTotal()}€</h2>
-  `;
+      <i class="fa-solid fa-trash-can remove" data-id="${item.id}"></i>
+    </article>
+  `).join("");
+
+  // 🟣 Totales
+  const total = getTotal();
+
+  subtotalContainer.textContent = `${total.toFixed(2)} €`;
+  totalContainer.textContent = `${total.toFixed(2)} €`;
+
+  // 🟣 Contador
+  const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+  counter.textContent = `${totalItems} items`;
 
   addEvents();
 }
 
 function addEvents() {
-  // Incrementar
-  document.getElementById("increase").forEach((btn) => {
+  // ➕ Incrementar
+  document.querySelectorAll(".stepper__btn--plus").forEach(btn => {
     btn.addEventListener("click", () => {
-      increaseQuantity(btn.dataset.id);
+      increaseQuantity(Number(btn.dataset.id));
       renderCart();
     });
   });
 
-  // Decrementar
-  document.getElementById("decrease").forEach((btn) => {
+  // ➖ Decrementar
+  document.querySelectorAll(".stepper__btn--minus").forEach(btn => {
     btn.addEventListener("click", () => {
-      decreaseQuantity(btn.dataset.id);
+      decreaseQuantity(Number(btn.dataset.id));
       renderCart();
     });
   });
 
-  // Eliminar
-  document.getElementById("remove").forEach((btn) => {
+  // 🗑️ Eliminar
+  document.querySelectorAll(".remove").forEach(btn => {
     btn.addEventListener("click", () => {
-      removeFromCart(btn.dataset.id);
+      removeFromCart(Number(btn.dataset.id));
       renderCart();
     });
   });
 }
 
 renderCart();
+
