@@ -154,7 +154,7 @@ function renderpatitos(patitos)
 }
 
 function filtrarCategoria(listaPatitos, filtrocategoria){
-    alert ("evento filtrar categoria");
+    //alert ("evento filtrar categoria");
     if (filtrocategoria!="todos") 
     {
         const patitosfiltrados = listaPatitos.filter(cat => cat.categoria === filtrocategoria);
