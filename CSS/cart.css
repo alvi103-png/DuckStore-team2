@@ -210,10 +210,24 @@ hr {
 .sections__container{
   display: flex;
   flex-direction: column;
-   margin: 2.5rem 1.25rem;
+   margin: 2.5rem auto;
    gap:3.19rem;
 }
 
+#btn-popup:disabled {
+  background-color: #e0e0e0;
+  color: #999;
+  border: 1px solid #ccc;
+  cursor: not-allowed;
+}
+
+.cart-empty {
+  text-align: center;
+  color: #777;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  text-align:left ;
+}
 /*DESKTOP VERSION CART*/
 @media (min-width: 768px) {
   .cart__container {
