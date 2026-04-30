@@ -54,7 +54,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap:0rem;
+  gap: 0rem;
 }
 
 /*Contenedor titulo*/
@@ -174,7 +174,6 @@
   box-shadow: 8px 8px 0 0 var(--purple);
 }
 
-
 .checkout__subtotal {
   color: var(--purple);
   font-size: 1rem;
@@ -198,7 +197,6 @@ hr {
   border-style: none;
 }
 
-
 .checkout__total,
 .checkout__total__price {
   color: var(--purple);
@@ -207,11 +205,11 @@ hr {
   line-height: 2rem;
 }
 
-.sections__container{
+.sections__container {
   display: flex;
   flex-direction: column;
-   margin: 2.5rem auto;
-   gap:3.19rem;
+  margin: 2.5rem auto;
+  gap: 3.19rem;
 }
 
 #btn-popup:disabled {
@@ -226,8 +224,64 @@ hr {
   color: #777;
   font-size: 1.2rem;
   margin-top: 2rem;
-  text-align:left ;
+  text-align: left;
 }
+
+dialog{
+  background-color: transparent;
+  border: none;
+
+   position: fixed;
+  inset: 0;
+  margin: auto;
+}
+
+.popup__content{
+  display: flex;
+  width: 21.875rem;
+  height: 20.0625rem;
+  padding: 2.5rem 3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.8125rem;
+
+  border-radius: 3rem;
+  border: 3px solid var(--purple);
+  background: var(--yellow-button-catalog);
+}
+
+.popup__content h2 {
+  color: var(--purple);
+  text-align: center;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 2rem;
+  text-transform: uppercase;
+}
+
+.popup__content p {
+  color: var(--purple);
+  text-align: center;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem; /* 133.333% */
+}
+
+#btnCerrar{
+  border: none;
+  background:none;
+}
+
+.fa-xmark{
+  color:var(--purple);
+  font-size: 1.5rem;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
 /*DESKTOP VERSION CART*/
 @media (min-width: 768px) {
   .cart__container {
@@ -284,32 +338,32 @@ hr {
     font-size: 2rem;
   }
 
-  .fa-trash-can:hover{
+  .fa-trash-can:hover {
     cursor: pointer;
   }
 
-  .checkout__container{
+  .checkout__container {
     width: 46rem;
     height: 24.125rem;
-    gap:3.81rem;
+    gap: 3.81rem;
     align-items: center;
-    padding:3.44rem 1.81rem;
+    padding: 3.44rem 1.81rem;
     align-self: flex-start;
   }
 
-  .checkout__content{
-  width: 100%;
-  }
-
-  hr{
+  .checkout__content {
     width: 100%;
   }
 
-  .sections__container{
+  hr {
+    width: 100%;
+  }
+
+  .sections__container {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap:1.69rem;
+    gap: 1.69rem;
     justify-content: center;
   }
 }
