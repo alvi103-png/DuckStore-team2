@@ -7,7 +7,6 @@ function creaArraypatitos(){
     nombre: "EL ORIGINAL",
     categoria: "otros",
     precio: "12.99",
-    precio: "12.99",
     imagen: "./assets/images/original.png",
     alt: "Pato de goma amarillo clásico"
   },
@@ -15,7 +14,6 @@ function creaArraypatitos(){
     id:2,
     nombre: "CHEFSITO",
     categoria: "profesiones",
-    precio: "12.99",
     precio: "12.99",
     imagen: "./assets/images/cocinero.jpg",
     alt: "Pato de goma amarillo disfrazado de cocinero"
@@ -25,7 +23,6 @@ function creaArraypatitos(){
     nombre: "DRÁCUACK",
     categoria: "peliculas",
     precio: "12.99",
-    precio: "12.99",
     imagen: "./assets/images/vampiro.jpg",
     alt: "Pato de goma amarillo disfrazado de drácula"
   },
@@ -34,7 +31,6 @@ function creaArraypatitos(){
     nombre: "VACUACK",
     categoria: "peliculas",
     precio: "12.99",
-    precio: "12.99",
     imagen: "./assets/images/vaquero.jpg",
     alt: "Pato de goma amarillo disfrazado de vaquero"
   },
@@ -42,7 +38,6 @@ function creaArraypatitos(){
     id:5,
     nombre: "GUA-FI",
     categoria: "profesiones",
-    precio: "12.99",
     precio: "12.99",
     imagen: "./assets/images/informatico.jpg",
     alt: "Pato de goma amarillo disfrazado de programador",
@@ -53,7 +48,6 @@ function creaArraypatitos(){
     nombre: "MAGO ALAKACUÁ",
     categoria: "profesiones",
     precio: "12.99",
-    precio: "12.99",
     imagen: "./assets/images/mago.jpg",
     alt: "Pato de goma amarillo disfrazado de mago"
   },
@@ -61,7 +55,6 @@ function creaArraypatitos(){
     id:7,
     nombre: "VIKINGO",
     categoria: "peliculas",
-    precio: "12.99",
     precio: "12.99",
     imagen: "./assets/images/vikingo.jpg",
     alt: "Pato de goma amarillo disfrazado de vikingo"
@@ -71,7 +64,6 @@ function creaArraypatitos(){
     nombre: "PRINCESA PLUMA",
     categoria: "otros",
     precio: "12.99",
-    precio: "12.99",
     imagen: "./assets/images/princesa.jpg",
     alt: "Pato de goma amarillo disfrazado de princesa"
   },
@@ -79,7 +71,6 @@ function creaArraypatitos(){
     id:9,
     nombre: "CUAKERO",
     categoria: "profesiones",
-    precio: "12.99",
     precio: "12.99",
     imagen: "./assets/images/rockero.jpg",
     alt: "Pato de goma amarillo disfrazado de roquero"
@@ -89,7 +80,6 @@ function creaArraypatitos(){
     nombre: "HOLMESITO",
     categoria: "peliculas",
     precio: "12.99",
-    precio: "12.99",
     imagen: "./assets/images/holmes.jpg",
     alt: "Pato de goma amarillo disfrazado de Sherlock Holmes"
   },
@@ -97,7 +87,6 @@ function creaArraypatitos(){
     id:11,
     nombre: "NINJACUACK",
     categoria: "otros",
-    precio: "12.99",
     precio: "12.99",
     imagen: "./assets/images/ninja.jpg",
     alt: "Pato de goma amarillo disfrazado de ninja"
@@ -107,7 +96,6 @@ function creaArraypatitos(){
     nombre: "CUACTABLE",
     categoria: "profesiones",
     precio: "12.99",
-    precio: "12.99",
     imagen: "./assets/images/contable.jpg",
     alt: "Pato de goma amarillo disfrazado de contable"
   },
@@ -115,7 +103,6 @@ function creaArraypatitos(){
     id:13,
     nombre: "SUPERCUAC",
     categoria: "peliculas",
-    precio: "12.99",
     precio: "12.99",
     imagen: "./assets/images/super.jpg",
     alt: "Pato de goma amarillo disfrazado de Superman"
@@ -125,7 +112,6 @@ function creaArraypatitos(){
     nombre: "ASTROCUAC",
     categoria: "profesiones",
     precio: "12.99",
-    precio: "12.99",
     imagen: "./assets/images/astronauta.jpg",
     alt: "Pato de goma amarillo disfrazado de astronauta"
   },
@@ -133,7 +119,6 @@ function creaArraypatitos(){
     id:15,
     nombre: "CAPITÁN PARCHE",
     categoria: "otros",
-    precio: "12.99",
     precio: "12.99",
     imagen: "./assets/images/pirata.jpg",
     alt: "Pato de goma amarillo disfrazado de pirata"
@@ -154,7 +139,7 @@ function addToCart(productId) {
         cart.push({ id: productId, quantity: 1 });
     }
     localStorage.setItem('cart', JSON.stringify(cart));
-    window.location.href = `/cart.html?added=${productId}`; // Asegúrate de la ruta correcta
+    window.location.href = `./cart.html?added=${productId}`; // Asegúrate de la ruta correcta
 }
 
 
