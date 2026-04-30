@@ -153,8 +153,49 @@ const popup = document.getElementById('miPopup');
 const btnAbrir = document.getElementById('btn-popup');
 const btnCerrar = document.getElementById('btnCerrar');
 
+function montarCheckout() {
+    //let totalItems = 0;
+    let subtotal = 0;
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const allProducts = creaArraypatitos();
+
+    const divrecibo = document.getElementById("recibo");
+    divrecibo.innerHTML ="";
+
+    cart.forEach(item => {
+        const product = getProductById(item.id, allProducts);
+
+        // Convertir precio a número para cálculos
+        const price = parseFloat(product.precio.replace('€', '').replace(',', '.').trim());
+        const itemTotal = price * item.quantity;
+        subtotal += itemTotal;
+        //totalItems += item.quantity;
+
+        const cardProduct = document.createElement("article");
+
+        cardProduct.innerHTML = `
+                
+                <div class="receipt__content">
+                    <span>${product.nombre}<span>
+                    <span class="receipt__price">${price.toFixed(2)} €</span>
+                    <br>
+                    <span >${item.quantity} unidades</span>
+                    <span class="receipt__price">${itemTotal} €</span>
+                </div>
+                
+            `;
+            divrecibo.appendChild(cardProduct);
+
+    })
+     divrecibo.innerHTML = divrecibo.innerHTML + `<span class="receipt__total"> TOTAL RECIBO: ${subtotal} €</span>`;
+}
+
+
+
+
 // Abrir el modal
 btnAbrir.addEventListener('click', () => {
+    montarCheckout();
     popup.showModal();
 });
 
