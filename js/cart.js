@@ -19,10 +19,11 @@ function renderCart(allProducts) {
     let subtotal = 0;
 
     if (cart.length === 0) {
-        cartItemsContainer.innerHTML = "<p>Tu carrito está vacío.</p>";
+        cartItemsContainer.innerHTML = "<p class='cart-empty'>Tu carrito está vacío.</p>";
         cartCounter.textContent = "0 items";
         subtotalPriceElement.textContent = "0.00 €";
         totalPriceElement.textContent = "0.00 €";
+        actualizarEstadoBoton();
         return;
     }
 
@@ -65,6 +66,8 @@ function renderCart(allProducts) {
 
     // Resaltar el producto recién añadido si existe
     highlightAddedProduct();
+
+    actualizarEstadoBoton();
 }
 
 // Función para manejar la adición/eliminación de cantidad y la eliminación de productos
@@ -146,127 +149,23 @@ window.onload = function() {
     }
 };
 
-/* GENERACION DE RECIBO 
-function generateReceiptNumber() {
-    return 'REC-' + Math.random().toString(36).substring(2, 11).toUpperCase();
+const popup = document.getElementById('miPopup');
+const btnAbrir = document.getElementById('btn-popup');
+const btnCerrar = document.getElementById('btnCerrar');
+
+// Abrir el modal
+btnAbrir.addEventListener('click', () => {
+    popup.showModal();
+});
+
+// Cerrar el modal
+btnCerrar.addEventListener('click', () => {
+  popup.close();
+});
+
+function actualizarEstadoBoton() {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  btnAbrir.disabled = cart.length === 0;
 }
 
-async function generateReceiptPdf(allProducts) {
-    const { jsPDF } = window.jspdf; // Accede a jsPDF desde el objeto window
-    const receiptNumber = generateReceiptNumber();
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const totalPriceElement = document.querySelector(".checkout__total__price");
-    const total = totalPriceElement ? totalPriceElement.textContent : "0.00 €";
-
-    const doc = new jsPDF();
-    let yPos = 20;
-
-    // Título
-    doc.setFontSize(24);
-    doc.text("Recibo de Compra Duck Store", 105, yPos, null, null, "center");
-    yPos += 15;
-
-    // Número de Recibo y Fecha
-    doc.setFontSize(12);
-    doc.text(`Número de Recibo: ${receiptNumber}`, 20, yPos);
-    doc.text(`Fecha: ${new Date().toLocaleDateString()}`, 170, yPos, null, null, "right");
-    yPos += 10;
-
-    doc.line(20, yPos, 190, yPos); // Línea separadora
-    yPos += 10;
-
-    // Detalles de cada producto
-    doc.setFontSize(14);
-    doc.text("Productos:", 20, yPos);
-    yPos += 10;
-
-    for (const item of cart) {
-        const product = getProductById(item.id, allProducts);
-        if (product) {
-            // Incrementar yPos si es necesario para dejar espacio
-            if (yPos > 250) { // Si se acerca al final de la página, añade una nueva página
-                doc.addPage();
-                yPos = 20;
-            }
-
-            doc.setFontSize(12);
-            doc.text(`- ${product.nombre} (x${item.quantity})`, 30, yPos);
-            doc.text(`${parseFloat(product.precio).toFixed(2)} €`, 180, yPos, null, null, "right");
-            yPos += 8;
-
-            // Añadir imagen del patito si es posible (usando html2canvas para el elemento de imagen)
-            // Para simplificar, vamos a intentar usar la URL directamente en jsPDF,
-            // pero html2canvas sería más útil si el "card" completo del patito fuera complejo
-            // y quisieras una "captura" de ese HTML.
-            // Para imágenes simples, jsPDF puede cargar desde URL si CORS lo permite.
-            // Si la imagen no carga, la quitamos o la reemplazamos por un placeholder.
-
-            try {
-                 const img = new Image();
-                 img.src = product.imagen;
-                 // Pequeño truco para esperar a que la imagen se cargue.
-                 // Esto es crucial para jsPDF cuando trabaja con URLs o bases64.
-                 await new Promise((resolve) => {
-                     img.onload = () => resolve();
-                     img.onerror = () => { console.error("Error al cargar la imagen para PDF:", product.imagen); resolve(); }; // Continúa incluso si la imagen falla
-                 });
-
-                 if (img.complete && img.naturalHeight !== 0) { // Asegurarse de que la imagen cargó correctamente
-                     const imgWidth = 20; // Ancho de la imagen en PDF
-                     const imgHeight = (img.naturalHeight / img.naturalWidth) * imgWidth;
-                     doc.addImage(img, 'PNG', 35, yPos, imgWidth, imgHeight);
-                     yPos += imgHeight + 5; // Espacio después de la imagen
-                 } else {
-                     doc.setFontSize(10);
-                     doc.text("(Imagen no disponible)", 35, yPos);
-                     yPos += 10;
-                 }
-            } catch (error) {
-                console.error("No se pudo añadir la imagen al PDF:", error);
-                doc.setFontSize(10);
-                doc.text("(Imagen no disponible)", 35, yPos);
-                yPos += 10;
-            }
-
-            yPos += 5; // Pequeño espacio entre productos
-        }
-    }
-
-    doc.line(20, yPos, 190, yPos); // Línea separadora
-    yPos += 10;
-
-    // Total
-    doc.setFontSize(16);
-    doc.text(`Total: ${total}`, 105, yPos, null, null, "center");
-    yPos += 20;
-
-    // Mensaje de agradecimiento
-    doc.setFontSize(10);
-    doc.text("¡Gracias por tu compra en Duck Store!", 105, yPos, null, null, "center");
-
-    // Guardar el PDF
-    doc.save(`recibo-duckstore-${receiptNumber}.pdf`);
-
-    // Opcional: Limpiar el carrito después de la compra exitosa
-    localStorage.removeItem('cart');
-    // Si quieres redirigir a una página de confirmación, podrías hacerlo aquí
-    // window.location.href = 'confirmacion.html';
-}
-
-
-// Al cargar la página del carrito
-window.onload = function() {
-    // Verifica si estamos en la página del carrito
-    if (window.location.pathname.includes("/cart.html")) {
-        const allProducts = creaArraypatitos(); // Obtener todos los productos
-        renderCart(allProducts); // Renderizar el carrito
-
-        // *** NUEVO CÓDIGO: Event listener para el botón de finalizar compra ***
-        const checkoutButton = document.querySelector(".checkout__button");
-        if (checkoutButton) {
-            checkoutButton.addEventListener("click", () => {
-                generateReceiptPdf(allProducts);
-            });
-        }
-    }
-}; */
+actualizarEstadoBoton();
