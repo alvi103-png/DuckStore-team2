@@ -12,9 +12,9 @@ document.getElementById("filtroCategoria").addEventListener("change", function()
 window.onload = function() {
     // Verifica si estamos en la página específica, por ejemplo "/catalog.html"
     if (window.location.pathname === "/catalog.html") {
-        //console.log("¡Estamos en la página de catalog!");
+        
        
-        // Aquí lanzas tu evento o función
+        
         patitos = creaArraypatitos();
         console.log(patitos);
         renderpatitos(patitos);

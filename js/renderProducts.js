@@ -154,7 +154,7 @@ function addToCart(productId) {
         cart.push({ id: productId, quantity: 1 });
     }
     localStorage.setItem('cart', JSON.stringify(cart));
-    window.location.href = `/cart.html?added=${productId}`; // Asegúrate de la ruta correcta
+    window.location.href = `/cart.html?added=${productId}`;
 }
 
 
