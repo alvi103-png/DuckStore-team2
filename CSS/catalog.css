@@ -67,7 +67,18 @@
   margin-bottom: 0.8rem;
 }
 
+#capabotones {
+  display: flex;
+  flex-direction: row;
+  gap: 1.31rem; /* ajusta el espacio a tu gusto */
+}
+
+.button_catalog i {
+  font-size: 1rem;
+}
+
 .button_catalog {
+  width: 100%;
   display: flex;
   padding: 0.75rem 0;
   justify-content: center;
@@ -76,7 +87,7 @@
 
   border-radius: 3rem;
   border: 3px solid var(--purple);
-  background: #fbe351;
+  background: var(--yellow-button-catalog);
   box-shadow: 3px 3px 0 0 var(--black);
 
   color: var(--yellow-dark-text);
@@ -92,6 +103,107 @@
   background: var(--purple);
   color: var(--white);
   transition: background 0.5s ease;
+  cursor: pointer;
+}
+
+/* #filtroCategoria {
+  border: 0;
+  padding: 0.4375rem 2rem;
+
+  border-radius: 62.4375rem;
+  border: 1px solid var(--purple);
+  background: rgba(106, 55, 212, 0.17);
+
+  color: var(--purple);
+  text-align: center;
+  font-family: var(--font);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25rem;
+
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem 0rem;
+} */
+
+select {
+  appearance: base-select;
+  /* style the 'button' */
+  border: 0;
+  padding: 0.4375rem 2rem;
+
+  border-radius: 62.4375rem;
+  border: 1px solid var(--purple);
+  background: rgba(106, 55, 212, 0.17);
+
+  color: var(--purple);
+  text-align: center;
+  font-family: var(--font);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25rem;
+  margin: 2rem 0rem;
+  cursor: pointer;
+  
+
+  &::picker(select) {
+    /* style the 'listbox' */
+    appearance: base-select;
+    border: 1px solid var(--purple);
+    background-color: rgb(232, 221, 255);
+    color: var(--purple);
+    padding: 0.25rem;
+    margin-top: 0.25rem;
+    border-radius: calc(0.5rem - 2px);
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition:
+      opacity 225ms ease-in-out,
+      transform 225ms ease-in-out;
+    transform-origin: top;
+    transform: translateY(0);
+    opacity: 1;
+
+     @starting-style {
+      transform: translateY(-0.25rem) scale(0.95);
+      opacity: 0;
+    }
+  }
+
+  &::picker-icon {
+    /* style the 'button' icon */
+     width: 1.2rem;
+    height: 1.2rem;
+
+    margin-left: auto;
+
+    transition: transform 225ms ease-in-out;
+
+  }
+
+
+  &:open::picker-icon {
+    /* style the 'button' when open */
+transform: rotate(180deg);
+  }
+
+  & option {
+    /* style the options */
+
+    &::checkmark {
+      /* style the checkmark on the checked option */
+      display: none;
+    }
+
+    &:checked {
+      /* style the checked option */
+      background-color:rgba(106, 0, 255, 0.1);
+    }
+  }
 }
 
 /*DESKTOP VERSION MEDIA QUERIES*/
@@ -142,5 +254,9 @@
     padding: 1.125rem 0;
 
     font-size: 1rem;
+  }
+
+  .button_catalog i {
+    font-size: 1.8rem;
   }
 }

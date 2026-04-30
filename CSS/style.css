@@ -2,19 +2,31 @@
 @import url(../CSS/catalog.css);
 @import url(../CSS/contact.css);
 @import url(../CSS/detail.css);
+@import url(../CSS/cart.css);
 
 
 /*AQUÍ VAN LAS VARIABLES*/
 :root {
   --purple: #6a37d4;
   --yellow: #facc15;
+  --yellow-button-catalog:#fbe351;
   --yellow-dark-text: #5d5200;
   --black: #18181b;
   --white: #ffffff;
   --grey: #eae7e7;
   --red: #be2d06;
   --grey-text-paragraph: #5c5b5b;
+  --grey-dark-landing-button:#2f2f2e;
   --white-cream: #f9f6f5;
+  --yellow-navbar:rgba(250, 204, 21, 0.7);
+  --grey-boxshadow-footer:rgba(106, 55, 212, 0.1);
+  --purple-hover:rgba(106, 55, 212, 0.8);
+  --card-description:gray;
+  --detail-quantity-background:#fce8e6;
+  --detail-quantity-border:#f9d2d0;
+  --detail-quantity-text:#b32600;
+  --text-container-info:#006859;
+  --text-container-info-background:rgba(0, 254, 220, 0.3);
   --font: "Plus Jakarta Sans", sans-serif;
 }
 
@@ -44,7 +56,7 @@ body {
 } */
 
 .navbar {
-  background-color: rgba(250, 204, 21, 0.7);
+  background-color:var(--yellow-navbar);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -65,6 +77,16 @@ body {
   color: var(--purple);
   cursor: pointer;
 }
+.nav__icons{
+  display: flex;
+  align-items: center;
+  gap:1rem;
+}
+
+.fa-shopping-cart {
+    font-size: 2rem; /* Ajusta según necesites */
+}
+
 .ul_links {
   width: 100%;
   background-color: var(--purple);
@@ -81,7 +103,7 @@ body {
 }
 .link {
   font-size: 3.5rem;
-  color: rgba(250, 204, 21, 0.7);
+  color: var(--yellow-navbar);
   font-weight: bold;
 }
 
@@ -134,7 +156,7 @@ body {
 }
 
 .quack{
-  color: #5D5200;
+  color: var(--yellow-dark-text);
   font-size: 48px;
   font-style: italic;
   font-weight: 800;
@@ -145,7 +167,7 @@ body {
 
 .text1{
   font-size: 14px;
-  color: #5C5B5B;
+  color: var(--grey-text-paragraph);
   margin-bottom: 1rem;
   text-align: left;
   font-weight: 500;
@@ -164,13 +186,13 @@ body {
   display: inline-flex;
   padding: 10px 10px;
   align-items: left;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font);
   font-size: 20px;
-  color: white;
+  color: var(--white);
   gap: 8px;
   border-radius: 9999px;
-  background: #6A37D4;
-  box-shadow: 4px 4px 0 0 #2F2F2E;
+  background: var(--purple);
+  box-shadow: 4px 4px 0 0 var(--grey-dark-landing-button);
   margin-bottom: 10px;
   left: 30px;
 }
@@ -332,10 +354,10 @@ display: flex;
   width: 92%;
   max-width: 800px;
   border-radius: 48px;
-  box-shadow: 8px 8px 0 0 #6A37D4;
+  box-shadow: 8px 8px 0 0 var(--purple);
   margin: 2.5rem auto;
   padding: 40px;
-  background-color: rgba(250, 204, 21, 0.7);
+  background-color: var(--yellow-navbar);
   z-index: 1;
 }
 
@@ -360,7 +382,7 @@ display: flex;
   display: inline-flex;
   font-size: 20px;
   font-weight: bold;
-  color: white;
+  color: var(--white);
   gap: 8px;
   border-radius: 9999px;
   background: var(--purple);
@@ -387,8 +409,8 @@ display: flex;
   flex-shrink: 0;
 
   border-radius: 48px 48px 0 0;
-  background: rgba(250, 204, 21, 0.7);
-  box-shadow: 0 -8px 30px 0 rgba(106, 55, 212, 0.1);
+  background: var(--yellow-navbar);
+  box-shadow: 0 -8px 30px 0 var(--grey-boxshadow-footer);
 }
 
 
@@ -418,8 +440,8 @@ display: flex;
   flex-shrink: 0;
 
   border-radius: 9999px;
-  background: #6a37d4;
-  box-shadow: 6px 6px 0 0 #2f2f2e;
+  background: var(--purple);
+  box-shadow: 6px 6px 0 0 var(--grey-dark-landing-button);
 
   color: var(--white-cream);
   text-align: center;
@@ -484,7 +506,7 @@ display: flex;
 }
 
 .rrss-footer-container li:hover {
-  box-shadow: 5px -12px 30px 5px rgba(106, 55, 212, 0.8);
+  box-shadow: 5px -12px 30px 5px var(--purple-hover);
   border-radius: 2rem;
   transition: box-shadow 0.3s ease;
 }
@@ -527,6 +549,11 @@ display: flex;
 /* QUERYS PARA RESPONSIVE DESIGN */
 
 @media (min-width: 768px) {
+
+  .nav__icons{
+    gap:7.63rem;
+  }
+
   .container1 {
     max-width: 800px; /* Más ancho en PC */
     padding: 60px;

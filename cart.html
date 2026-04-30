@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Duck Store</title>
     <link rel="stylesheet" href="CSS/style.css">
-    <!-- <link rel="stylesheet" href="CSS/detail.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -51,27 +52,60 @@
             
 
      </header>
-     <section class="detail_container">
-        <div class="detailcard">
-            <img class="detailcard__image" src="assets/images/informatico.jpg" alt="patito"> 
-            <div class="detailcard__content">
-                <h1 class="detailcard__name">Gua-Fi</h1>
-                <h2 class="detailcard__price">12.99€</h2>
-                <p class="detailcard__description">
-                    El patito programador que no sabías que necesitabas 
-                    Gua-Fi no es solo un patito de hule, es pura actitud tech en versión adorable. Perfecto para darle vida a tu escritorio, sacarte una sonrisa en medio del trabajo o ser el regalo más original para cualquier amante del mundo digital.
-                    Divertido, diferente y con mucho flow geek… porque programar también puede tener estilo.
-                </p>    
-                <p class="detailcard__quantity">
-                    15 unidades disponibles
-                </p>      
-                <button class="button_catalog detailcard__buttoncarrito">
-                     <i class="fas fa-shopping-cart"></i>
-                    AÑADIR AL CARRITO
-                </button>
-            </div>
+
+     <main>
+        <section class="cart__container">
+            <div class="cart__title">
+            <h1 class="cart__h1">TU CARRITO</h1>
+            <span class="cart__counter">3 items</span>
         </div>
-       </section>
+        <div class="sections__container">
+        <div class="card__container">
+            <article class="card__product">
+                <img src="./assets/images/informatico.jpg" alt="Pato de goma amarillo disfrazado de programador" class="card__product__img">
+                <div class="card__product__content">
+                    <h3 class="card__product__title">GUA-FI</h3>
+                    <p class="card__product__price">12.99 €</p>
+                    <div class="stepper">
+                        <button class="stepper__btn stepper__btn--minus">−</button>
+                        <span class="stepper__value">1</span>
+                        <button class="stepper__btn stepper__btn--plus">+</button>
+                    </div>
+                </div>
+                <i class="fa-solid fa-trash-can"></i>
+            </article>
+            <article class="card__product">
+                <img src="./assets/images/vampiro.jpg" alt="Pato de goma amarillo disfrazado de drácula" class="card__product__img">
+                <div class="card__product__content">
+                    <h3 class="card__product__title">GUA-FI</h3>
+                    <p class="card__product__price">12.99 €</p>
+                    <div class="stepper">
+                        <button class="stepper__btn stepper__btn--minus">−</button>
+                        <span class="stepper__value">1</span>
+                        <button class="stepper__btn stepper__btn--plus">+</button>
+                    </div>
+                </div>
+                <i class="fa-solid fa-trash-can"></i>
+            </article>
+        </div>
+        <article class="checkout__container">
+            <div class="checkout__content">
+                <div class="checkout__subtotal__container">
+                <h4 class="checkout__subtotal">SUBTOTAL</h4>
+                <p class="checkout__subtotal__price">25.98 €</p>
+                </div>
+                <hr>
+                <div class="checkout__total__container">
+                <h4 class="checkout__total">TOTAL</h4>
+                <p class="checkout__total__price">25.98€</p>
+                </div>
+            </div>
+            <button class="button_catalog checkout__button" id="btn-popup">FINALIZAR COMPRA</button>
+        </article>
+    </div>
+        </section>
+     </main>
+     
 <footer class="footer">
         <div class="copy-container">
         <p class="naming-footer">Duck Store</p>
@@ -104,8 +138,17 @@
 
      </footer>
        
-    
-    
+    <script src="js/cart.js" type="module"></script>
+    <dialog id="miPopup">
+        <div class="popup__content">
+        <button id="btnCerrar"><i class="fa-solid fa-xmark"></i></button>
+  <h2>Pago realizado</h2>
+  <hr class="hr__pago">
+  <div id="recibo"></div> 
+  <hr class="hr__pago">
+  <p>¡Gracias por tu cuackcompra! 🦆</p>
+        </div>
+</dialog>
   
 </body>
 </html>

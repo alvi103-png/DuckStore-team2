@@ -8,12 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+    <script src="js/products.js" type="module"></script>
+    <script src="js/renderProducts.js" type="module"></script>
     <header class="header">
          <nav class="navbar">
             <img src="assets/images/logo.svg" alt="Logo" class="logo">
-
+            <div class="nav__icons">
+            <a href="cart.html"><i class="fas fa-shopping-cart list_icon"></i></a>
             <label class="label_hamburguesa"for="menu_hamburguesa">
                 <svg 
                     xmlns="http://www.w3.org/2000/svg" 
@@ -30,6 +34,7 @@
             
                 </svg>
             </label>
+            </div>
             <input type="checkbox" id="menu_hamburguesa" class="menu_hamburguesa">
 
             <ul class="ul_links">
@@ -51,9 +56,14 @@
      <main class="main-catalog">
         <section class="catalog_container">
         <h1 class="h1_catalog">CATÁLOGO</h1>
-
-        <div class="catalog_grid">
-            <article class="card">
+        <select id="filtroCategoria">
+            <option value="todos">Todos</option>
+            <option value="profesiones">Profesiones</option>
+            <option value="peliculas">Peliculas</option>
+            <option value="otros">Otros</option>
+        </select>
+        <div class="catalog_grid" id="catalog">
+            <!-- <article class="card">
                 <img src="./assets/images/original.png" alt="Pato de goma amarillo clásico" class="card_img">
                 <h2 class="h2_catalog">EL ORIGINAL</h2>
                 <p class="p_catalog">12.99 €</p>
@@ -156,7 +166,7 @@
                 <h2 class="h2_catalog">CAPITÁN PARCHE</h2>
                 <p class="p_catalog">12.99 €</p>
                 <button class="button_catalog">VER DETALLES</button>
-            </article>
+            </article> -->
             
         </div>
     </section>

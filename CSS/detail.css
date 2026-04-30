@@ -8,7 +8,7 @@
   max-width: 500px;  /* Tamaño máximo deseado */
   height: auto;      /* Mantiene la proporción automáticamente */
   
-  border: 2px solid #6A37D4;
+  border: 2px solid var(--purple);
   border-radius: 15px; 
 
 }
@@ -35,23 +35,19 @@
 
 .detailcard__name {
     font-weight: bold;
-    color:black;
+    color:var(--black);
 }
 
 .detailcard__description
 {
-  border: 2px solid gray;
+  border: 2px solid var(--card-description);
   border-radius: 15px; 
   padding: 5%;
-  /* margin-left:0%;
-  margin-top: 5%;
-  margin-right: 5%;
-  margin-bottom: 5%;  */
   width:100%;
 }
 .detailcard__price {
     font-size: 1.5rem;
-    color: #6A37D4;
+    color: var(--purple);
     font-style: normal;
     font-weight: bold;
 } 
@@ -60,8 +56,8 @@
   
   text-align: center;
   /* Colores */
-  background-color: #fce8e6; /* Fondo rosado muy claro */
-  border: 1px solid #f9d2d0; /* Borde sutil (opcional para mayor definición) */
+  background-color: var(--detail-quantity-background); /* Fondo rosado muy claro */
+  border: 1px solid var(--detail-quantity-border); /* Borde sutil (opcional para mayor definición) */
 
   border-radius: 50px; 
 
@@ -70,13 +66,16 @@
   margin-bottom: 5%;
   min-width: 200px;
   font-size: 0.7rem;
-  /*color:red;*/
   /* Estilo del texto */
-  color: #b32600;            /* Color naranja rojizo oscuro */
+  color: var(--detail-quantity-text);            /* Color naranja rojizo oscuro */
 
   font-weight: bold;
   font-style: normal;
 }
+    
+    .detailcard__buttoncarrito{
+      gap: 10px;
+    } 
 
  @media (min-width: 768px) { 
   .detailcard {
