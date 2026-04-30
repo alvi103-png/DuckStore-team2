@@ -227,8 +227,16 @@ hr {
   text-align: left;
 }
 
-#miPopup {
-  margin: auto auto;
+dialog{
+  background-color: transparent;
+  border: none;
+
+   position: fixed;
+  inset: 0;
+  margin: auto;
+}
+
+.popup__content{
   display: flex;
   width: 21.875rem;
   height: 20.0625rem;
@@ -243,7 +251,7 @@ hr {
   background: var(--yellow-button-catalog);
 }
 
-#miPopup h2 {
+.popup__content h2 {
   color: var(--purple);
   text-align: center;
   font-size: 1.5rem;
@@ -253,7 +261,7 @@ hr {
   text-transform: uppercase;
 }
 
-#miPopup p {
+.popup__content p {
   color: var(--purple);
   text-align: center;
   font-size: 1.5rem;
@@ -265,6 +273,9 @@ hr {
 #btnCerrar{
   border: none;
   background:none;
+}
+
+.fa-xmark{
   color:var(--purple);
   font-size: 1.5rem;
   align-self: flex-end;
