@@ -1,6 +1,6 @@
 // importamos los metodos que cargan el array de productos
 // y que renderiza los productos en el DOM
-import {creaArraypatitos, renderpatitos, filtrarCategoria, addToCart} from './renderproducts.js'
+import {creaArraypatitos, renderpatitos, filtrarCategoria, addToCart} from './renderProducts.js'
 
 let patitos = [];
 
@@ -11,8 +11,8 @@ document.getElementById("filtroCategoria").addEventListener("change", function()
 
 window.onload = function() {
     // Verifica si estamos en la página específica, por ejemplo "/catalog.html"
-    if (window.location.pathname === "/catalog.html") {
-        
+    if (window.location.pathname.includes("catalog.html")) {
+        //console.log("¡Estamos en la página de catalog!");
        
         
         patitos = creaArraypatitos();
